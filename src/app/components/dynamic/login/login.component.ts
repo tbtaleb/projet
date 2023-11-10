@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+  showSignUp() {
+    let d= document.getElementsByClassName("container");
+    
+  }
 }
