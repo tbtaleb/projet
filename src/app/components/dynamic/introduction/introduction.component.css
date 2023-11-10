@@ -1,8 +1,22 @@
 #intro{
-  padding: 100px;
+  padding-top: 100px;
 }
 
 #text{
   font-family: 'asix';
-  font-size:xx-large ;
+  font-size:4.5rem ;
+  width: 50%;
+  margin-top: 10px;
+}
+
+#it{
+  letter-spacing: 2.6cm;
+}
+
+#meet{
+  letter-spacing: 0.28cm;
+}
+
+#where{
+  letter-spacing: 0.18cm;
 }
