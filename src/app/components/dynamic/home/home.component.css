@@ -1,0 +1,7 @@
+.bg {
+  height: 3000px;
+  background-image: url("../../../../assets/home.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  
+}
