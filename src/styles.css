@@ -1,16 +1,14 @@
-@font-face{
-    font-family: 'asix';
-    src: url('assets\ASIX-FOUNDER.otf');
+@font-face {
+  font-family: "asix";
+  src: url("assets\ASIX-FOUNDER.otf");
 }
-*{
-    margin: 0;
-padding: 0;
-   
+* {
+  margin: 0;
+  padding: 0;
 }
 
-
-body{
-  height: 2500px;
+body {
+  height: 3000px;
   background-image: url("assets/home.png");
   background-repeat: no-repeat;
   background-size: contain;
