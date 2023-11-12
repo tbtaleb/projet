@@ -1,8 +1,8 @@
 <div  id="bg">
     <h1 id="title">Animus</h1>
     <p id="subtitle">Gaming Club</p>
-    <div id="log" class="container">
-        <div id="logindiv">
+    <!-- <div class="container">
+        <div class="log" id="logindiv">
             <p class="login">LOGIN</p>
             <form>
                 <input type="text" name="username" placeholder="Username"/><br/>
@@ -13,15 +13,16 @@
                 </button>
             </form>
         </div>
-    </div>
-    <div id="sign" class="container" >
-        <div id="logindiv">
-            <p class="login">LOGIN</p>
+    </div> -->
+    <!-- <div class="container" >
+        <div  class="sign" id="logindiv">
+            <p class="login">Sign up</p>
             <form>
-                <input type="text" name="username" placeholder="Username"/><br/>
-                <input type="password" name="pass" placeholder="Password"/><br/>
+                <input type="text" name="username" placeholder="Your full name"/><br/>
+                <input type="email" name="email" placeholder="Entre your Email address"/><br/>
+                <input type="password" name="pass" placeholder="Choose your password"/><br/>
                 <button class="loginbutton">
-                    Login
+                    Join
                     <i class="fa-solid fa-arrow-right" style="color: #662c91;"></i>
                 </button>
             </form>
@@ -33,5 +34,6 @@
         <a class="signuplink" (click)="showSignUp()" href="">
             Join Us Now!!
         </a>
-    </p>
+    </p> -->
+    <router-outlet></router-outlet>
 </div>
