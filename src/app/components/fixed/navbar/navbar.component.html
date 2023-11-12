@@ -1,7 +1,11 @@
-
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
+<nav [ngClass]="{'bg-dark shadow': isScrolled}" class="navbar fixed-top navbar-expand-lg navbar-dark p-md-1 ">
   <div class="container">
-    <img class="navbar-brand" src="../../../../assets/animus.png" alt="" style="width:80px; height:auto;">
+    <img
+      class="navbar-brand"
+      src="../../../../assets/animus.png"
+      alt=""
+      style="width: 80px; height: auto"
+    />
     <button
       class="navbar-toggler"
       type="button"
@@ -14,26 +18,25 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
+    <div class="collapse navbar-collapse " id="navbarNav">
+      <ul class="navbar-nav ">
+        <li class="nav-item px-3">
           <a class="nav-link text-white" href="#">Home</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item px-3">
           <a class="nav-link text-white" href="#">About</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item px-3">
           <a class="nav-link text-white" href="#">Blog</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
+        <li class="nav-item px-3">
           <a class="nav-link text-white" href="#">Contact</a>
         </li>
       </ul>
       <div class="mx-auto"></div>
-      <button class="login btn">Login</button>
+      <button [ngClass]="{'btn-light': isScrolled,'btn-outline-light': !isScrolled}" class="btn">Login</button>
     </div>
   </div>
 </nav>
+
+
