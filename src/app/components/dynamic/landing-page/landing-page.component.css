@@ -50,3 +50,12 @@ p{
     color: #662c91;
 
 }
+button{
+    padding: 5px 10px;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    background-color: #662c91;
+    border-radius: 15px;
+}

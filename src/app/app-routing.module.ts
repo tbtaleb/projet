@@ -4,6 +4,7 @@ import { LoginComponent } from './components/dynamic/login/login.component';
 import { LoginDivComponent } from './components/dynamic/login-div/login-div.component';
 import { SignupDivComponent } from './components/dynamic/signup-div/signup-div.component';
 import { LandingPageComponent } from './components/dynamic/landing-page/landing-page.component';
+import { HomeComponent } from './components/dynamic/home/home.component';
 
 const routes: Routes = [
   {path:'landingpage', title:'Welcome', component:LandingPageComponent,},
@@ -12,6 +13,7 @@ const routes: Routes = [
     {path:'signup', title:'Sign Up', component:SignupDivComponent},
     {path: '', redirectTo: 'login', pathMatch: 'full' },
   ]},
+  {path:'home', title:'Home', component:HomeComponent},
   {path: '', redirectTo: 'landingpage', pathMatch: 'full' },
 ];
 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-div',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./login-div.component.css']
 })
 export class LoginDivComponent {
+  constructor(private router:Router){}
 
+  toHome(){
+    this.router.navigate(['/home']);
+  }
 }
