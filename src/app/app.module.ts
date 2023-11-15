@@ -13,6 +13,8 @@ import { LoginDivComponent } from './components/dynamic/login-div/login-div.comp
 import { SignupDivComponent } from './components/dynamic/signup-div/signup-div.component';
 import { LandingPageComponent } from './components/dynamic/landing-page/landing-page.component';
 
+import {HttpClientModule} from "@angular/common/http";
+import { FormationListComponent } from './components/dynamic/formation-list/formation-list.component';
 
 @NgModule({
   declarations: [
@@ -23,11 +25,13 @@ import { LandingPageComponent } from './components/dynamic/landing-page/landing-
     IntroductionComponent,
     LoginDivComponent,
     SignupDivComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    FormationListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,11 @@
+
+  <ul>
+    <li *ngFor="let training of lesFormations" >
+      <div>
+        <h3>{{training.name}}</h3>
+        <p>Price: {{training.price | currency:'USD':'symbol'}}</p>
+        <p>Participants: {{training.nbParticipant}}</p>
+      </div>
+    </li>
+  </ul>
+  
