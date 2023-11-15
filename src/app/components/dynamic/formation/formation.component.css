@@ -1,0 +1,32 @@
+.formation img {
+  width: 800px;
+  border-radius: 80px;
+  filter: grayscale(100%);
+  position: relative;
+  
+}
+.formation img:hover {
+  filter: contrast(160%);
+  cursor: pointer;
+}
+
+.formation{
+  position: relative;
+  width: 50%;
+  margin-top: 200px;
+}
+
+.textRight{
+  right: 0%;
+}
+.floatRight{
+  right: -70%;
+}
+.formation div {
+  font-family: "asix";
+  font-size: 3rem;
+  color: white;
+  position: absolute;
+  top: 50px;
+  text-shadow: 0px 6px black;
+}

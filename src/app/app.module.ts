@@ -15,6 +15,7 @@ import { LandingPageComponent } from './components/dynamic/landing-page/landing-
 
 import {HttpClientModule} from "@angular/common/http";
 import { FormationListComponent } from './components/dynamic/formation-list/formation-list.component';
+import { FormationComponent } from './components/dynamic/formation/formation.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FormationListComponent } from './components/dynamic/formation-list/form
     LoginDivComponent,
     SignupDivComponent,
     LandingPageComponent,
-    FormationListComponent
+    FormationListComponent,
+    FormationComponent
   ],
   imports: [
     BrowserModule,
