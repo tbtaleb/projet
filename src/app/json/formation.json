@@ -4,7 +4,7 @@
             "id": 1,
             "name": "Game Development Fundamentals",
             "description": "Explore the basics of game development using popular game engines.",
-            "photo": "game_dev_fundamentals.jpg",
+            "photo": " ../assets/trainings.jpg ",
             "date": "2023-02-15",
             "price": 129.99,
             "nbParticipant": 20,

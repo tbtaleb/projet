@@ -5,6 +5,8 @@ import { LoginDivComponent } from './components/dynamic/login-div/login-div.comp
 import { SignupDivComponent } from './components/dynamic/signup-div/signup-div.component';
 import { LandingPageComponent } from './components/dynamic/landing-page/landing-page.component';
 import { HomeComponent } from './components/dynamic/home/home.component';
+import { FormationListComponent } from './components/dynamic/formation-list/formation-list.component';
+import { SelectedFormationComponent } from './components/dynamic/selected-formation/selected-formation.component';
 
 const routes: Routes = [
   {path:'landingpage', title:'Welcome', component:LandingPageComponent,},
@@ -13,6 +15,8 @@ const routes: Routes = [
     {path:'signup', title:'Sign Up', component:SignupDivComponent},
     {path: '', redirectTo: 'login', pathMatch: 'full' },
   ]},
+  {path:'formationList', title:'Formation', component:FormationListComponent},
+  {path:'formationList/:idf', title:'Formation', component:SelectedFormationComponent},
   {path:'home', title:'Home', component:HomeComponent},
   {path: '', redirectTo: 'landingpage', pathMatch: 'full' },
 ];

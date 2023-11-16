@@ -1,4 +1,4 @@
-
+<!-- 
   <ul>
     <li *ngFor="let training of lesFormations" >
       <div>
@@ -8,4 +8,43 @@
       </div>
     </li>
   </ul>
-  
+   -->
+<div class="bg">
+  <h1 class="title">
+    workshops !
+  </h1>
+  <div class="training-list">
+    <div *ngFor="let training of lesFormations" class="training-item" (mouseover)="showDetails(training)" [routerLink]="['/formationList',training.id]">
+      <div class="training-info" *ngIf="training.workshop">
+        <!-- <img [src]="training.photo" alt="{{training.name}}" class="img"> -->
+        <h3>{{training.name}}</h3>
+        <p>Price: {{training.price | currency:'TND':'symbol'}}</p>
+        <p>Participants: {{training.nbParticipant}}</p>
+      </div>
+    </div>
+  </div>
+  <br><br>
+
+  <h1 class="title">
+    trainings !
+  </h1>
+  <div class="training-list">
+    <div *ngFor="let training of lesFormations" class="training-item" (mouseover)="showDetails(training)">
+      <div class="training-info" *ngIf="!training.workshop">
+        <!-- <img [src]="training.photo" alt="{{training.name}}" class="img"> -->
+        <h3>{{training.name}}</h3>
+        <p>Price: {{training.price | currency:'TND':'symbol'}}</p>
+        <p>Participants: {{training.nbParticipant}}</p>
+      </div>
+    </div>
+  </div>
+  <!-- <div *ngIf="selectedTraining" class="details">
+    <h2>{{selectedTraining.name}}</h2>
+    <p>Description: {{selectedTraining.description}}</p>
+    <p>Date: {{selectedTraining.date | date:'medium'}}</p>
+    <p>Location: {{selectedTraining.location}}</p>
+    <p *ngIf="selectedTraining.certif">Certification Available</p>
+    <p *ngIf="selectedTraining.workshop">Workshop Available</p>
+    <button (click)="clearDetails()">Close Details</button>
+  </div> -->
+</div>

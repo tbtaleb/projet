@@ -8,20 +8,27 @@ import { FormationService } from 'src/app/services/formation.service';
   styleUrls: ['./formation-list.component.css']
 })
 export class FormationListComponent implements OnInit{
+  selectedTraining: any | null = null;
   ngOnInit(): void {
-    this.afficherFormation();
+    
+      this.formatioService.getFormation().subscribe((data)=>{
+        console.log(data);
+        this.lesFormations=data
+      });
+    
   }
 
   lesFormations: Formation[]=[];
   constructor(private formatioService:FormationService, ){}
 
-  afficherFormation(){
-    this.formatioService.getFormation().subscribe((data)=>{
-      console.log(data);
-      this.lesFormations=data
-    });
+  
+
+  showDetails(training: any): void {
+    this.selectedTraining = training;
   }
 
-  
+  clearDetails(): void {
+    this.selectedTraining = null;
+  }
   
 }
