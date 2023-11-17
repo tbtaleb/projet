@@ -16,7 +16,7 @@ const routes: Routes = [
     {path: '', redirectTo: 'login', pathMatch: 'full' },
   ]},
   {path:'formationList', title:'Formation', component:FormationListComponent},
-  {path:'formationList/:idf', title:'Formation', component:SelectedFormationComponent},
+  {path:'formationList/:idf', title:'FormationDetail', component:SelectedFormationComponent},
   {path:'home', title:'Home', component:HomeComponent},
   {path: '', redirectTo: 'landingpage', pathMatch: 'full' },
 ];

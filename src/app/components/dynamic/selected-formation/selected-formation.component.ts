@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 import { FormationService } from 'src/app/services/formation.service';
 
 @Component({
@@ -12,6 +12,7 @@ export class SelectedFormationComponent implements OnInit {
   selectedTraining: any;
   constructor(
     private activatedRoute:ActivatedRoute,
+    private router:Router,
     private formationService:FormationService
     ){}
   ngOnInit(): void {
@@ -19,5 +20,7 @@ export class SelectedFormationComponent implements OnInit {
     this.selectedTraining=this.formationService.getFormationById(this.idf);
   }
 
-  
+  GoBack(){
+    this.router.navigate(['/formationList']);
+  }
 }

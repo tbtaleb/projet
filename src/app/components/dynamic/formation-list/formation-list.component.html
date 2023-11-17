@@ -14,12 +14,14 @@
     workshops !
   </h1>
   <div class="training-list">
-    <div *ngFor="let training of lesFormations" class="training-item" (mouseover)="showDetails(training)" [routerLink]="['/formationList',training.id]">
+    <div *ngFor="let training of lesFormations" class="training-item" (mouseover)="showDetails(training)" >
       <div class="training-info" *ngIf="training.workshop">
+        
         <!-- <img [src]="training.photo" alt="{{training.name}}" class="img"> -->
         <h3>{{training.name}}</h3>
         <p>Price: {{training.price | currency:'TND':'symbol'}}</p>
         <p>Participants: {{training.nbParticipant}}</p>
+        <a class="link" [routerLink]="['/formationList',training.id]">check more</a>
       </div>
     </div>
   </div>
