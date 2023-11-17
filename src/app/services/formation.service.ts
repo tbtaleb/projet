@@ -17,8 +17,6 @@ export class FormationService {
   }
 
   getFormationById(id: number): Observable<Formation | undefined> {
-    return this.getFormation().pipe(
-      map((formations) => formations.find((formation) => formation.id === id))
-    );
+    return this.http.get<Formation>(url+"/"+id);
   }
 }
