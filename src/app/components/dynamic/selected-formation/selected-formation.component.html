@@ -1,2 +1,5 @@
-<div> {{selectedTraining | json}}</div>
-<button class="btn btn-danger" (click)="GoBack()">Retour</button>
+<div class="bg">
+  <div class="light">{{ selectedTraining | json }}</div>
+  <div class="light">{{selectedTraining.name}}</div>
+  <button class="btn btn-danger" (click)="GoBack()">Retour</button>
+</div>

@@ -3,11 +3,12 @@
 }
 
 .bg {
-  height: 100vh;
+  min-height: 100vh;
   width: auto;
   background: rgb(2, 0, 36);
   background: linear-gradient(36deg, rgba(2, 0, 36, 1) 0%, rgba(70, 7, 236, 1) 100%);
   padding: 10px;
+  padding-top: 100px;
 }
 
 .training-list {

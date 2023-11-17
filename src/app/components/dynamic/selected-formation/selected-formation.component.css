@@ -1,0 +1,12 @@
+.bg {
+  min-height: 100vh;
+  width: auto;
+  background: #020024;
+  background: linear-gradient(36deg, rgb(1, 0, 22) 0%, rgba(70, 7, 236, 1) 100%);
+  padding: 10px;
+  padding-top: 100px;
+}
+
+.light{
+  color: white;
+}
