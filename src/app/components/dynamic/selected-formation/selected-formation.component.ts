@@ -5,7 +5,7 @@ import { FormationService } from 'src/app/services/formation.service';
 @Component({
   selector: 'app-selected-formation',
   templateUrl: './selected-formation.component.html',
-  styleUrls: ['./selected-formation.component.css']
+  styleUrls: ['./selected-formation.component.css'],
 })
 export class SelectedFormationComponent implements OnInit {
   idf: number = 0;
@@ -19,15 +19,16 @@ export class SelectedFormationComponent implements OnInit {
 
   ngOnInit(): void {
     this.idf = this.activatedRoute.snapshot.params['idf'];
-    this.formationService.getFormationById(this.idf).subscribe(
-      (formation) => {
+
+    this.formationService.getFormationById(this.idf).subscribe({
+      next: (formation) => {
         this.selectedTraining = formation;
         console.log(this.selectedTraining);
       },
-      (error) => {
+      error: (error) => {
         console.error(error);
-      }
-    );
+      },
+    });
   }
 
   GoBack() {
