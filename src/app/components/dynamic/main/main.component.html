@@ -3,6 +3,6 @@
   <app-introduction></app-introduction>
 
   <div (click)="GoTo()" class="formation" *ngFor="let formation of Formation">
-    <app-formation [name]="formation.name" [img]="formation.img"></app-formation>
+    <app-formation [id]="formation.id" [name]="formation.name" [img]="formation.img"></app-formation>
   </div>
 </div>

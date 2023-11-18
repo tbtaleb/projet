@@ -16,11 +16,6 @@ export class MainComponent {
     },
     {
       id: 2,
-      name: 'Workshops',
-      img: '../../../../assets/austin-distel-rxpThOwuVgE-unsplash.jpg',
-    },
-    {
-      id: 3,
       name: 'Events',
       img: '../../../../assets/austin-distel-rxpThOwuVgE-unsplash.jpg',
     },
