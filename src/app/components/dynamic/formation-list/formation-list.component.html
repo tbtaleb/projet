@@ -10,27 +10,55 @@
   </ul>
    -->
 <div class="bg">
-  <h1 class="title">workshops !</h1>
-  <div class="training-list">
-    <div
-      *ngFor="let training of lesFormations"
-      class="training-item"
-      (mouseover)="showDetails(training)"
-    >
+  <div class="container-fluid my-5" style="width: 50rem;">
+    <form class="d-flex" role="search">
+      <input
+        class="form-control me-2"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+        
+      />
+      <button class="btn btn-outline-light" type="submit">Search</button>
+    </form>
+  </div>
+  <h2 class="title m-5">workshops <span>&</span> trainings:</h2>
+  <div class="training-list container">
+    <div class="row gy-3">
       <div
+        *ngFor="let training of lesFormations"
+        class="training-item col-md-4 my-3"
+      >
+        <!-- <div
         (click)="onClick(training.id)"
         class="training-info"
-        *ngIf="training.workshop"
+        
       >
-        <!-- <img [src]="training.photo" alt="{{training.name}}" class="img"> -->
+        <img [src]="training.photo" alt="{{training.name}}" class="img">
         <h3>{{ training.name }}</h3>
         <p>Price: {{ training.price | currency : "TND" : "symbol" }}</p>
         <p>Participants: {{ training.nbParticipant }}</p>
         <a class="link">check more</a>
+      </div> -->
+
+        <div
+          class="card"
+          style="cursor: pointer"
+          (click)="onClick(training.id)"
+        >
+          <img [src]="training.photo" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">{{ training.name }}</h5>
+            <p class="card-text">
+              {{ training.description }}
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <br /><br />
+  <!-- <br /><br />
 
   <h1 class="title">trainings !</h1>
   <div class="training-list">
@@ -40,14 +68,29 @@
       (mouseover)="showDetails(training)"
     >
       <div class="training-info" *ngIf="!training.workshop">
-        <!-- <img [src]="training.photo" alt="{{training.name}}" class="img"> -->
+        <img [src]="training.photo" alt="{{training.name}}" class="img">
         <h3>{{ training.name }}</h3>
         <p>Price: {{ training.price | currency : "TND" : "symbol" }}</p>
         <p>Participants: {{ training.nbParticipant }}</p>
       </div>
+      <div
+        class="card"
+        style="cursor: pointer"
+        (click)="onClick(training.id)"
+        *ngIf="!training.workshop"
+      >
+        <img [src]="training.photo" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{ training.name }}</h5>
+          <p class="card-text">
+            {{ training.description }}
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
     </div>
   </div>
-  <!-- <div *ngIf="selectedTraining" class="details">
+  <div *ngIf="selectedTraining" class="details">
     <h2>{{selectedTraining.name}}</h2>
     <p>Description: {{selectedTraining.description}}</p>
     <p>Date: {{selectedTraining.date | date:'medium'}}</p>

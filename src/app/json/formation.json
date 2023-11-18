@@ -1,102 +1,100 @@
 {
-    "formation": [
-        {
-            "id": 1,
-            "name": "Game Development Fundamentals",
-            "description": "Explore the basics of game development using popular game engines.",
-            "photo": " ../assets/trainings.jpg ",
-            "date": "2023-02-15",
-            "price": 129.99,
-            "nbParticipant": 20,
-            "certif": true,
-            "workshop": false,
-            "location": "Virtual"
-        },
-        {
-            "id": 2,
-            "name": "Unity3D Game Programming",
-            "description": "Learn game programming with Unity3D for creating immersive gaming experiences.",
-            "photo": "unity3d_programming.jpg",
-            "date": "2023-03-10",
-            "price": 179.99,
-            "nbParticipant": 15,
-            "certif": true,
-            "workshop": true,
-            "location": "Online"
-        },
-        {
-            "id": 3,
-            "name": "Advanced Game Design Workshop",
-            "description": "Dive into advanced game design principles and mechanics.",
-            "photo": "advanced_game_design.jpg",
-            "date": "2023-04-05",
-            "price": 249.99,
-            "nbParticipant": 30,
-            "certif": true,
-            "workshop": false,
-            "location": "In-Person"
-        },
-        {
-            "id": 4,
-            "name": "Virtual Reality (VR) Game Development",
-            "description": "Create immersive virtual reality games with hands-on VR development techniques.",
-            "photo": "vr_game_dev.jpg",
-            "date": "2023-05-20",
-            "price": 199.99,
-            "nbParticipant": 25,
-            "certif": true,
-            "workshop": true,
-            "location": "Hybrid"
-        },
-        {
-            "id": 5,
-            "name": "Mobile Game Development with Unreal Engine",
-            "description": "Build mobile games using the powerful Unreal Engine.",
-            "photo": "unreal_mobile_game.jpg",
-            "date": "2023-06-15",
-            "price": 149.99,
-            "nbParticipant": 18,
-            "certif": true,
-            "workshop": false,
-            "location": "Virtual"
-        },
-        {
-            "id": 6,
-            "name": "Game Art and Animation Essentials",
-            "description": "Master the art of creating captivating game visuals and animations.",
-            "photo": "game_art_animation.jpg",
-            "date": "2023-07-10",
-            "price": 179.99,
-            "nbParticipant": 22,
-            "certif": true,
-            "workshop": true,
-            "location": "Online"
-        },
-        {
-            "id": 7,
-            "name": "Multiplayer Game Development",
-            "description": "Learn the intricacies of developing multiplayer games for online gaming experiences.",
-            "photo": "multiplayer_game_dev.jpg",
-            "date": "2023-08-05",
-            "price": 229.99,
-            "nbParticipant": 20,
-            "certif": true,
-            "workshop": false,
-            "location": "In-Person"
-        },
-        {
-            "id": 8,
-            "name": "Game Testing and Quality Assurance",
-            "description": "Understand the importance of game testing and quality assurance in the game development lifecycle.",
-            "photo": "game_testing_qa.jpg",
-            "date": "2023-09-15",
-            "price": 149.99,
-            "nbParticipant": 25,
-            "certif": true,
-            "workshop": true,
-            "location": "Hybrid"
-        }
-    ]
+  "formation": [
+    {
+      "id": 1,
+      "name": "Game Development Fundamentals",
+      "description": "Explore the basics of game development using popular game engines.",
+      "photo": "../assets/trainings.jpg",
+      "date": "2023-02-15",
+      "price": 129.99,
+      "nbParticipant": 20,
+      "certif": true,
+      "workshop": false,
+      "location": "Virtual"
+    },
+    {
+      "id": 2,
+      "name": "Unity3D Game Programming",
+      "description": "Learn game programming with Unity3D for creating immersive gaming experiences.",
+      "photo": "../assets/trainings.jpg",
+      "date": "2023-03-10",
+      "price": 179.99,
+      "nbParticipant": 15,
+      "certif": true,
+      "workshop": true,
+      "location": "Online"
+    },
+    {
+      "id": 3,
+      "name": "Advanced Game Design Workshop",
+      "description": "Dive into advanced game design principles and mechanics.",
+      "photo": "../assets/trainings.jpg",
+      "date": "2023-04-05",
+      "price": 249.99,
+      "nbParticipant": 30,
+      "certif": true,
+      "workshop": false,
+      "location": "In-Person"
+    },
+    {
+      "id": 4,
+      "name": "Virtual Reality (VR) Game Development",
+      "description": "Create immersive virtual reality games with hands-on VR development techniques.",
+      "photo": "../assets/trainings.jpg",
+      "date": "2023-05-20",
+      "price": 199.99,
+      "nbParticipant": 25,
+      "certif": true,
+      "workshop": true,
+      "location": "Hybrid"
+    },
+    {
+      "id": 5,
+      "name": "Mobile Game Development with Unreal Engine",
+      "description": "Build mobile games using the powerful Unreal Engine.",
+      "photo": "../assets/trainings.jpg",
+      "date": "2023-06-15",
+      "price": 149.99,
+      "nbParticipant": 18,
+      "certif": true,
+      "workshop": false,
+      "location": "Virtual"
+    },
+    {
+      "id": 6,
+      "name": "Game Art and Animation Essentials",
+      "description": "Master the art of creating captivating game visuals and animations.",
+      "photo": "../assets/trainings.jpg",
+      "date": "2023-07-10",
+      "price": 179.99,
+      "nbParticipant": 22,
+      "certif": true,
+      "workshop": true,
+      "location": "Online"
+    },
+    {
+      "id": 7,
+      "name": "Multiplayer Game Development",
+      "description": "Learn the intricacies of developing multiplayer games for online gaming experiences.",
+      "photo": "../assets/trainings.jpg",
+      "date": "2023-08-05",
+      "price": 229.99,
+      "nbParticipant": 20,
+      "certif": true,
+      "workshop": false,
+      "location": "In-Person"
+    },
+    {
+      "id": 8,
+      "name": "Game Testing and Quality Assurance",
+      "description": "Understand the importance of game testing and quality assurance in the game development lifecycle.",
+      "photo": "../assets/trainings.jpg",
+      "date": "2023-09-15",
+      "price": 149.99,
+      "nbParticipant": 25,
+      "certif": true,
+      "workshop": true,
+      "location": "Hybrid"
+    }
+  ]
 }
-
-
