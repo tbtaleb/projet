@@ -10,6 +10,6 @@ export class LandingPageComponent {
   constructor(private router:Router){}
 
   toLogin(){
-    this.router.navigate(['/loginpage'])
+    this.router.navigate(['/loginpage']);
   }
 }

@@ -7,18 +7,6 @@ import { FormationService } from 'src/app/services/formation.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent implements OnInit {
-  ngOnInit(): void {
-    this.afficherFormation();
-  }
-
-  lesFormations: Formation[] = [];
-  constructor(private formatioService: FormationService) {}
-
-  afficherFormation() {
-    this.formatioService.getFormation().subscribe((data) => {
-      console.log(data);
-      this.lesFormations = data;
-    });
-  }
+export class HomeComponent {
+  
 }

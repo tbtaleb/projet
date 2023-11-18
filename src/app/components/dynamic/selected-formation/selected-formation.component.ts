@@ -32,6 +32,6 @@ export class SelectedFormationComponent implements OnInit {
   }
 
   GoBack() {
-    this.router.navigate(['/formationList']);
+    this.router.navigate(['/events']);
   }
 }

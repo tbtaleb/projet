@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Form } from '@angular/forms';
 import { Formation } from 'src/app/classes/formation';
 
 @Component({
@@ -7,5 +8,7 @@ import { Formation } from 'src/app/classes/formation';
   styleUrls: ['./formation.component.css'],
 })
 export class FormationComponent {
-  @Input() train!: Formation;
+  @Input() id!: number;
+  @Input() name!: string;
+  @Input() img!: string;
 }

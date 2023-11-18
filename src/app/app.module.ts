@@ -17,6 +17,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { FormationListComponent } from './components/dynamic/formation-list/formation-list.component';
 import { FormationComponent } from './components/dynamic/formation/formation.component';
 import { SelectedFormationComponent } from './components/dynamic/selected-formation/selected-formation.component';
+import { MainComponent } from './components/dynamic/main/main.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { SelectedFormationComponent } from './components/dynamic/selected-format
     LandingPageComponent,
     FormationListComponent,
     FormationComponent,
-    SelectedFormationComponent
+    SelectedFormationComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
