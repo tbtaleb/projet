@@ -9,6 +9,7 @@ import { FormationListComponent } from './components/dynamic/formation-list/form
 import { SelectedFormationComponent } from './components/dynamic/selected-formation/selected-formation.component';
 import { MainComponent } from './components/dynamic/main/main.component';
 import { AboutUsComponent } from './components/dynamic/about-us/about-us.component';
+import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [
   { path: 'landingpage', title: 'Welcome', component: LandingPageComponent },
@@ -33,7 +34,7 @@ const routes: Routes = [
     component: SelectedFormationComponent,
   },
   {
-    path: '',
+    path: 'home',
     title: 'Home',
     component: HomeComponent,
     children: [
@@ -46,16 +47,17 @@ const routes: Routes = [
         path: 'events',
         title: 'events',
         component: FormationListComponent,
+        canActivate: [AuthGuard],
       },
       {
         path: 'aboutUs',
         title: 'About Us',
-        component: AboutUsComponent
+        component: AboutUsComponent,
       },
       { path: '', redirectTo: 'main', pathMatch: 'full' },
     ],
   },
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'landingpage', pathMatch: 'full' },
 ];
 
 @NgModule({

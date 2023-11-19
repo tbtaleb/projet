@@ -10,7 +10,6 @@ export class Formation {
         public certif : boolean,
         public workshop : boolean,
         public location : string,            
-
     ){}
 }
 

@@ -19,6 +19,7 @@ import { FormationComponent } from './components/dynamic/formation/formation.com
 import { SelectedFormationComponent } from './components/dynamic/selected-formation/selected-formation.component';
 import { MainComponent } from './components/dynamic/main/main.component';
 import { AboutUsComponent } from './components/dynamic/about-us/about-us.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,14 +35,15 @@ import { AboutUsComponent } from './components/dynamic/about-us/about-us.compone
     FormationComponent,
     SelectedFormationComponent,
     MainComponent,
-    AboutUsComponent
+    AboutUsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

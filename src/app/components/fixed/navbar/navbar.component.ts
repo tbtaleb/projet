@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent {
-  constructor(private router:Router){}
+  constructor(private router: Router, private auth: AuthService) {}
   isScrolled = false;
-
+  logedIn = this.auth.isAuthenticated();
   @HostListener('window:scroll', [])
   @HostListener('window:resize', [])
   onWindowScroll() {
@@ -20,7 +21,11 @@ export class NavbarComponent {
     }
   }
 
-  goToLogin(){
-    this.router.navigate(["/loginpage"])
+  goToLogin() {
+    this.router.navigate(['/loginpage']);
+  }
+
+  logOut() {
+    this.auth.logout();
   }
 }
