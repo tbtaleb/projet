@@ -10,7 +10,12 @@
       "nbParticipant": 20,
       "certif": true,
       "workshop": false,
-      "location": "Virtual"
+      "location": "Virtual",
+      "comments": [
+        {"id": 1, "idUser": 101, "text": "Great training session!"},
+        {"id": 2, "idUser": 102, "text": "I learned a lot."},
+        {"id": 3, "idUser": 103, "text": "Looking forward to more workshops."}
+      ]
     },
     {
       "id": 2,

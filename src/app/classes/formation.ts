@@ -1,3 +1,5 @@
+import { Commentaire } from "./commentaire";
+
 export class Formation {
     constructor(
         public id:number,
@@ -10,7 +12,7 @@ export class Formation {
         public certif : boolean,
         public workshop : boolean,
         public location : string,            
-
+        public comments : Commentaire[] = [],
     ){}
 }
 
