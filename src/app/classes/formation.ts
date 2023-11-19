@@ -1,7 +1,6 @@
 import { Commentaire } from "./commentaire";
 
 export class Formation {
-    comments: any;
     constructor(
         public id:number,
         public name:string,
