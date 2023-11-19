@@ -1,6 +1,7 @@
 <div class="bg">
+
   <div class="bg2">
-    <div style="display: flex;">
+    <div style="display: flex;  ">
       <img [src]="selectedTraining.photo" class="img">
       <div style="margin-left: 50px;">
         <h1>{{ selectedTraining.name }}</h1>
@@ -10,15 +11,15 @@
         <div style="display: flex;">
           <div>
             Date: {{selectedTraining.date}} <br>
-          Location: {{selectedTraining.location}}
+            Location: {{selectedTraining.location}}
           </div>
           <div style="margin-left:50px ;">
             {{selectedTraining.nbParticipant}} Spots Available <br>
             <i class="fa-solid fa-check" style="color: #000000;" *ngIf="selectedTraining.certif"> Certified</i>
           </div>
-        </div> 
+        </div>
         <hr style="border-top: solid">
-        <div style="display: flex;">
+        <div style="display: flex; justify-content: space-between;">
           <div class="price">
             {{selectedTraining.price}} TND
           </div>
@@ -26,7 +27,30 @@
             Enroll Me
           </button>
         </div>
-        
+
+      </div>
+    </div>
+    <div style="display: flex; justify-content: space-between;">
+      <div>
+        <ul>
+          <li *ngFor="let comment of lesComments" style="color: black;">
+            {{ comment}}
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3>Add a Comment</h3>
+        <form (ngSubmit)="addComment(selectedTraining.id, newComment)">
+          <div>
+            <label for="userId">User ID:</label>
+            <input id="userId" [(ngModel)]="newComment.idUser" name="userId" required />
+          </div>
+          <div>
+            <label for="commentText">Comment:</label>
+            <textarea id="commentText" [(ngModel)]="newComment.text" name="commentText" required></textarea>
+          </div>
+          <button type="submit">Add Comment</button>
+        </form>
       </div>
     </div>
 

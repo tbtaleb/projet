@@ -19,7 +19,11 @@ import { FormationComponent } from './components/dynamic/formation/formation.com
 import { SelectedFormationComponent } from './components/dynamic/selected-formation/selected-formation.component';
 import { MainComponent } from './components/dynamic/main/main.component';
 import { AboutUsComponent } from './components/dynamic/about-us/about-us.component';
+
 import { ReactiveFormsModule } from '@angular/forms';
+
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -38,6 +42,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AboutUsComponent,
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
