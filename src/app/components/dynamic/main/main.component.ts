@@ -18,6 +18,10 @@ export class MainComponent {
       id: 2,
       name: 'Events',
       img: '../../../../assets/austin-distel-rxpThOwuVgE-unsplash.jpg',
+    },{
+      id: 3,
+      name: 'About us',
+      img: '../../../../assets/austin-distel-rxpThOwuVgE-unsplash.jpg',
     },
   ];
   GoTo(){

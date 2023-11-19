@@ -1,0 +1,43 @@
+.bg {
+    margin: 0;
+    padding: 100px;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("../../../../assets/abouUsBg.png");
+    background-size: cover;
+}
+
+h1 {
+    font-family: asix;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 75px;
+}
+
+.logo {
+    margin-top: 15vh;
+    width: 30vw;
+    height: auto;
+    float: left;
+}
+
+.paraDiv {
+    width: 25vw;
+    line-height: 15px;
+    font-family: "chakraBold";
+}
+
+.para {
+    font-size: 6vh;
+    color: black;
+}
+
+p {
+    font-family: "asix";
+    line-height: normal;
+}
+
+.span {
+    font-size: 1.75vh;
+}

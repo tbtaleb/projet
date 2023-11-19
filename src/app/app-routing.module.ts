@@ -8,6 +8,7 @@ import { HomeComponent } from './components/dynamic/home/home.component';
 import { FormationListComponent } from './components/dynamic/formation-list/formation-list.component';
 import { SelectedFormationComponent } from './components/dynamic/selected-formation/selected-formation.component';
 import { MainComponent } from './components/dynamic/main/main.component';
+import { AboutUsComponent } from './components/dynamic/about-us/about-us.component';
 
 const routes: Routes = [
   { path: 'landingpage', title: 'Welcome', component: LandingPageComponent },
@@ -46,6 +47,11 @@ const routes: Routes = [
         title: 'events',
         component: FormationListComponent,
       },
+      {
+        path: 'aboutUs',
+        title: 'About Us',
+        component: AboutUsComponent
+      },
       { path: '', redirectTo: 'main', pathMatch: 'full' },
     ],
   },
@@ -56,4 +62,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

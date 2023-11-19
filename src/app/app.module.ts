@@ -18,6 +18,7 @@ import { FormationListComponent } from './components/dynamic/formation-list/form
 import { FormationComponent } from './components/dynamic/formation/formation.component';
 import { SelectedFormationComponent } from './components/dynamic/selected-formation/selected-formation.component';
 import { MainComponent } from './components/dynamic/main/main.component';
+import { AboutUsComponent } from './components/dynamic/about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { MainComponent } from './components/dynamic/main/main.component';
     FormationListComponent,
     FormationComponent,
     SelectedFormationComponent,
-    MainComponent
+    MainComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
