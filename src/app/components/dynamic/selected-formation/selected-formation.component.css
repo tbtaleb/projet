@@ -1,3 +1,6 @@
+*{
+  font-family: chakrabold;
+}
 .bg {
   min-height: 100vh;
   width: auto;
@@ -5,8 +8,47 @@
   background: linear-gradient(36deg, rgb(1, 0, 22) 0%, rgba(70, 7, 236, 1) 100%);
   padding: 10px;
   padding-top: 100px;
+  display: flex;
+  align-items: center;
 }
 
-.light{
-  color: white;
+.bg2 {
+  margin: auto;
+  padding: 30px;
+  background-color: aliceblue;
+  border-radius: 30px;
+  border-width: bold;
+  border-color: blueviolet;
+
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.662);
+  height: 70vh;
+  width: 70vw;
 }
+
+.img{
+  border-radius: 30px;
+  width: 35vw ;
+}
+.price{
+  font-size: 30px;
+  color: white;
+  display: inline-block;
+  padding: 10px;
+  background-color: rgb(157, 2, 235);
+  box-shadow: 5px 3px  rgba(0, 0, 0, 0.662);
+  border-radius: 30px;
+  border-width: bold;
+}
+.enroll{
+  font-size: 30px;
+  color: white;
+  display: inline-block;
+  padding: 10px;
+  background-color: rgb(157, 2, 235);
+  box-shadow: 5px 3px  rgba(0, 0, 0, 0.662);
+  border-radius: 30px;
+  border-width: bold;
+}
+/* .light{
+  color: white;
+} */
