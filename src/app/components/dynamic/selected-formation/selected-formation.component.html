@@ -1,6 +1,7 @@
 <div class="bg">
+
   <div class="bg2">
-    <div style="display: flex;">
+    <div style="display: flex;  ">
       <img [src]="selectedTraining.photo" class="img">
       <div style="margin-left: 50px;">
         <h1>{{ selectedTraining.name }}</h1>
@@ -18,7 +19,7 @@
           </div>
         </div>
         <hr style="border-top: solid">
-        <div style="display: flex;">
+        <div style="display: flex; justify-content: space-between;">
           <div class="price">
             {{selectedTraining.price}} TND
           </div>
@@ -29,32 +30,30 @@
 
       </div>
     </div>
-
-
-  </div>
-</div>
-<button class="btn btn-danger" (click)="GoBack()">Retour</button>
-
-<div style="display: flex;">
-  <div>
-    <ul>
-      <li *ngFor="let comment of lesComments" style="color: black;">
-        {{ comment}}
-      </li>
-    </ul>
-  </div>
-  <div>
-    <h3>Add a Comment</h3>
-    <form (ngSubmit)="addComment(selectedTraining.id, newComment)">
+    <div style="display: flex; justify-content: space-between;">
       <div>
-        <label for="userId">User ID:</label>
-        <input id="userId" [(ngModel)]="newComment.idUser" name="userId" required />
+        <ul>
+          <li *ngFor="let comment of lesComments" style="color: black;">
+            {{ comment}}
+          </li>
+        </ul>
       </div>
       <div>
-        <label for="commentText">Comment:</label>
-        <textarea id="commentText" [(ngModel)]="newComment.text" name="commentText" required></textarea>
+        <h3>Add a Comment</h3>
+        <form (ngSubmit)="addComment(selectedTraining.id, newComment)">
+          <div>
+            <label for="userId">User ID:</label>
+            <input id="userId" [(ngModel)]="newComment.idUser" name="userId" required />
+          </div>
+          <div>
+            <label for="commentText">Comment:</label>
+            <textarea id="commentText" [(ngModel)]="newComment.text" name="commentText" required></textarea>
+          </div>
+          <button type="submit">Add Comment</button>
+        </form>
       </div>
-      <button type="submit">Add Comment</button>
-    </form>
+    </div>
+
+    <button class="btn btn-danger" (click)="GoBack()">Retour</button>
   </div>
 </div>
