@@ -24,6 +24,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './components/dynamic/dashboard/dashboard.component';
+import { AdmiNavBarComponent } from './components/fixed/admi-nav-bar/admi-nav-bar.component';
+import { AdminFooterComponent } from './components/fixed/admin-footer/admin-footer.component';
+import { AdminSideBarComponent } from './components/dynamic/admin-side-bar/admin-side-bar.component';
 
 
 @NgModule({
@@ -42,6 +45,9 @@ import { DashboardComponent } from './components/dynamic/dashboard/dashboard.com
     MainComponent,
     AboutUsComponent,
     DashboardComponent,
+    AdmiNavBarComponent,
+    AdminFooterComponent,
+    AdminSideBarComponent,
   ],
   imports: [
     FormsModule,

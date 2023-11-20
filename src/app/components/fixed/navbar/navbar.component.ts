@@ -28,4 +28,10 @@ export class NavbarComponent {
   logOut() {
     this.auth.logout();
   }
+
+  showAlert(){
+    if(!this.logedIn){
+      alert("you should log in first")
+    }
+  }
 }

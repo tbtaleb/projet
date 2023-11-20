@@ -18,6 +18,6 @@ export class UserService {
   }
 
   getUserById(id: number): Observable<User | undefined> {
-    return this.http.get<User>(this.usersUrl+"/"+id);
+    return this.http.get<User>(usersUrl+"/"+id);
   }
 }
