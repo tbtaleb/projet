@@ -3,22 +3,25 @@
     margin: 0;
     padding: 0;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     background-image: url("../../../../assets/loginbg.png");
     background-size: cover;
 }
 #title{
     font-family: 'asix';
-    font-size: 125px;
+    font-size: 8vw;
     text-shadow: 5px 5px black;
     color:#fff;
     text-align: center;
     margin: 0;
+
 }
+
+
 #subtitle{
     margin: 0;
     font-family: 'asix';
-    font-size: 40px;
+    font-size: 3vw;
     text-shadow: 3px 3px black;
     color:#fff;
     text-align: center;

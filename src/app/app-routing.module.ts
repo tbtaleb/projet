@@ -10,6 +10,7 @@ import { SelectedFormationComponent } from './components/dynamic/selected-format
 import { MainComponent } from './components/dynamic/main/main.component';
 import { AboutUsComponent } from './components/dynamic/about-us/about-us.component';
 import { AuthGuard } from './guard/auth.guard';
+import { DashboardComponent } from './components/dynamic/dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: 'landingpage', title: 'Welcome', component: LandingPageComponent },
@@ -32,6 +33,11 @@ const routes: Routes = [
     path: 'formationList/:idf',
     title: 'FormationDetail',
     component: SelectedFormationComponent,
+  },
+  {
+    path: 'dashboard',
+    title: 'Dashboard',
+    component: DashboardComponent,
   },
   {
     path: 'home',

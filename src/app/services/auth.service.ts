@@ -11,6 +11,7 @@ export class AuthService {
   private usersUrl = 'http://localhost:3500/user'; // Adjust the URL based on your project structure
 
   private authenticated = false;
+  private isAdmin = false;
 
   constructor(private http: HttpClient, private router: Router) {}
 
@@ -22,7 +23,13 @@ export class AuthService {
 
       if (authenticatedUser) {
         this.authenticated = true;
-        this.router.navigate(['/home']);
+        this.isAdmin = authenticatedUser.isAdmin;
+
+        if (this.isAdmin) {
+          this.router.navigate(['/dashboard']);
+        } else {
+          this.router.navigate(['/home']);
+        }
       } else {
         this.authenticated = false;
         console.log('User not found');
@@ -30,14 +37,21 @@ export class AuthService {
     });
   }
 
+  logout(): void {
+    this.authenticated = false;
+    this.isAdmin = false;
+    this.router.navigate(['/loginpage']);
+  }
+
   isAuthenticated(): boolean {
     return this.authenticated;
   }
-  logout(): void {
-    this.authenticated = false;
-    this.router.navigate(['/loginpage']);
+
+  isAdminUser(): boolean {
+    return this.isAdmin;
   }
-  private getUsers(): Observable<User[]> {
-    return this.http.get<User[]>(this.usersUrl);
+
+  private getUsers() {
+    return this.http.get<any[]>(this.usersUrl);
   }
 }

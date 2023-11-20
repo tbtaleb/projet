@@ -38,7 +38,7 @@ export class SelectedFormationComponent implements OnInit {
   }
 
   GoBack() {
-    this.router.navigate(['/events']);
+    this.router.navigate(['events']);
   }
   
   addComment(formationId: number, newComment: Commentaire): void {

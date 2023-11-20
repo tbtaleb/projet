@@ -17,9 +17,7 @@ export class UserService {
     return this.http.get<User[]>(usersUrl);
   }
 
-  getUserByUsername(username: string): Observable<User | undefined> {
-    return this.getUsers().pipe(
-      map((users) => users.find((user) => user.username === username))
-    );
+  getUserById(id: number): Observable<User | undefined> {
+    return this.http.get<User>(this.usersUrl+"/"+id);
   }
 }
