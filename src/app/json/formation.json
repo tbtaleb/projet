@@ -12,9 +12,9 @@
       "workshop": false,
       "location": "Virtual",
       "comments": [
-        {"id": 1, "idUser": 101, "text": "Great training session!"},
-        {"id": 2, "idUser": 102, "text": "I learned a lot."},
-        {"id": 3, "idUser": 103, "text": "Looking forward to more workshops."}
+        {"id": 1, "idUser": 1, "text": "Great training session!"},
+        {"id": 2, "idUser": 2, "text": "I learned a lot."},
+        {"id": 3, "idUser": 3, "text": "Looking forward to more workshops."}
       ]
     },
     {

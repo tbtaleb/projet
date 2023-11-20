@@ -1,8 +1,8 @@
 .bg {
     margin: 0;
-    padding: 100px;
+    padding-top: 100px;
     width: 100%;
-    min-height: 100vh;
+    max-height: 175vh;
     background-image: url("../../../../assets/abouUsBg.png");
     background-size: cover;
 }
@@ -16,28 +16,50 @@ h1 {
 }
 
 .logo {
-    margin-top: 15vh;
-    width: 30vw;
+    /* margin-top: 15vh; */
+    width: 40vw;
     height: auto;
     float: left;
 }
 
 .paraDiv {
-    width: 25vw;
+    width: 50vw;
     line-height: 15px;
     font-family: "chakraBold";
 }
 
 .para {
-    font-size: 6vh;
-    color: black;
+    font-size: 12vh;
+    color: rgb(255, 255, 255);
 }
 
+.text1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding:50px 50px 0px 50px;
+    background-color: rgb(6, 6, 6);
+    margin: 0;
+}
+.text2{
+    text-align: center;
+    color: #fff;
+    font-family: chakrabold;
+    font-size: 5vh;
+    padding:50px;
+    background-color: rgb(93, 7, 197);
+}
+
+.text3{
+    display: flex;
+    justify-content: space-between;
+    padding:50px;
+    text-decoration: none;
+    color: #000000;
+    font-family: chakrabold;
+}
 p {
     font-family: "asix";
     line-height: normal;
 }
 
-.span {
-    font-size: 1.75vh;
-}
