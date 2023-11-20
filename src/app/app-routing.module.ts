@@ -64,6 +64,7 @@ const routes: Routes = [
     ],
   },
   { path: '', redirectTo: 'landingpage', pathMatch: 'full' },
+  { path: '**', redirectTo: 'landingpage', pathMatch: 'full' }
 ];
 
 @NgModule({

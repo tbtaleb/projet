@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, map } from 'rxjs';
 import { User } from '../classes/user';
 import { Router } from '@angular/router';
+import { UserService } from './user.service';
 
 @Injectable({
   providedIn: 'root',
@@ -13,10 +14,10 @@ export class AuthService {
   private authenticated = false;
   private isAdmin = false;
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private http: HttpClient, private router: Router,private userService:UserService) {}
 
   login(username: string, password: string): void {
-    this.getUsers().subscribe((users) => {
+    this.userService.getUsers().subscribe((users) => {
       const authenticatedUser = users.find(
         (user) => user.username === username && user.password === password
       );
@@ -51,7 +52,9 @@ export class AuthService {
     return this.isAdmin;
   }
 
-  private getUsers() {
-    return this.http.get<any[]>(this.usersUrl);
+  setAuthenticated(value: boolean): void {
+    this.authenticated = value;
   }
+
+ 
 }

@@ -1,14 +1,16 @@
-<div class="wrapper">
-  <div class="sidebar" data-color="red" data-image="">
-      <app-admin-side-bar></app-admin-side-bar>
-      <div class="sidebar-background" style="background-image: url(assets/sidebar-5.jpg)"></div>
-  </div>
 
-  <div class="main-panel">
-      <app-admi-nav-bar></app-admi-nav-bar>
-      <router-outlet></router-outlet>
-          <app-admin-footer></app-admin-footer>
-      
-  </div>
+<nav>
+  <h1>Admin Dashboard</h1>
+  
+</nav>
 
+<aside>
+  <ul>
+    <li><a routerLink="/dashboard/members">Members</a></li>
+    <li><a routerLink="/dashboard/activities">Activities</a></li>
+   
+  </ul>
+</aside>
+<div class="main-content">
+ 
 </div>

@@ -6,7 +6,7 @@
     flex-direction: column;
     border-radius: 50px;
     width: 500px;
-    height: 250px;
+    min-height: 270px;
     background: rgb(90, 7, 129);
     background: linear-gradient(16deg, #662c91 52%, #9047c3 97%);
     box-shadow:3px 0px  10px rgba(0, 0, 0, 0.457) ;
@@ -28,14 +28,14 @@ input{
     height: 40px;
     border: 0;
     padding: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
     border-radius: 10px;
 }
 
 .loginbutton{
     float:right;
     box-shadow:1px 0px  10px rgba(0, 0, 0, 0.564) ;
-    margin-top: 5px;
     font-family: 'chakraBold';
     color:#662c91;
     border: 0;

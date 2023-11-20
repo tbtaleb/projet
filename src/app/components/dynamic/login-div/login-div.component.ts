@@ -14,8 +14,11 @@ export class LoginDivComponent  {
 
   constructor(private fb: FormBuilder, private authService: AuthService) {
     this.loginForm = this.fb.group({
-      username: ['', Validators.required],
-      password: ['', Validators.required],
+      username: ['', [Validators.minLength(3), Validators.required]],
+      password: [
+        '',
+        [Validators.minLength(3), Validators.maxLength(8), Validators.required],
+      ],
     });
   }
 
