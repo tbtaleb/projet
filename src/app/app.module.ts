@@ -23,6 +23,7 @@ import { AboutUsComponent } from './components/dynamic/about-us/about-us.compone
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { FormsModule } from '@angular/forms';
+import { DashboardComponent } from './components/dynamic/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { FormsModule } from '@angular/forms';
     SelectedFormationComponent,
     MainComponent,
     AboutUsComponent,
+    DashboardComponent,
   ],
   imports: [
     FormsModule,
