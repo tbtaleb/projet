@@ -12,7 +12,7 @@ export class SelectedFormationComponent implements OnInit {
   idf: number = 0;
   selectedTraining: any;
   newComment : any={ idUser: 0, text: '' };;
-  lesComments: Commentaire[] | undefined= [] ;
+  lesComments: Commentaire[] | undefined;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -24,15 +24,12 @@ export class SelectedFormationComponent implements OnInit {
     this.idf = this.activatedRoute.snapshot.params['idf'];
 
     this.formationService.getFormationById(this.idf).subscribe((data) => {
-      console.log('les données de la formation selectionnée sont ', data?.comments);
       this.lesComments = data?.comments;
-      console.log('les coomments', this.lesComments)
     });
 
     this.formationService.getFormationById(this.idf).subscribe({
       next: (formation) => {
         this.selectedTraining = formation;
-        console.log(this.selectedTraining);
       },
       error: (error) => {
         console.error(error);

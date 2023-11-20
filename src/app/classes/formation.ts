@@ -12,7 +12,7 @@ export class Formation {
         public certif : boolean,
         public workshop : boolean,
         public location : string,            
-        public comments : Commentaire[] = [],
+        public comments : Commentaire[],
     ){}
 }
 

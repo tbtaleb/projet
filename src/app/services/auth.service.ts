@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   providedIn: 'root',
 })
 export class AuthService {
-  private usersUrl = 'http://localhost:3000/user'; // Adjust the URL based on your project structure
+  private usersUrl = 'http://localhost:3500/user'; // Adjust the URL based on your project structure
 
   private authenticated = false;
 
