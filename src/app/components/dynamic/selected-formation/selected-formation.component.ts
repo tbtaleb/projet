@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Commentaire } from 'src/app/classes/commentaire';
@@ -36,7 +36,7 @@ export class SelectedFormationComponent implements OnInit {
     this.idf = this.activatedRoute.snapshot.params['idf'];
 
     this.commentForm = this.formBuilder.nonNullable.group({
-      comment: [''],
+      comment: ['', [Validators.required]],
     });
 
     this.userService.getUsers().subscribe((data) => {
@@ -71,7 +71,7 @@ export class SelectedFormationComponent implements OnInit {
   const loggedInUserId = this.authService.getCurrentUserId();
   console.log(loggedInUserId);
   
-  if (loggedInUserId) {
+  if (loggedInUserId && this.commentForm.value.comment) {
     const newComment: Commentaire = new Commentaire(
       +loggedInUserId,
       this.commentForm.value.comment,

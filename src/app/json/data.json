@@ -13,24 +13,19 @@
       "location": "Virtual",
       "comments": [
         {
-          "id": 1,
-          "idUser": 1,
-          "text": "Great training session!"
-        },
-        {
-          "id": 2,
-          "idUser": 2,
-          "text": "I learned a lot."
-        },
-        {
-          "id": 3,
-          "idUser": 3,
-          "text": "Looking forward to more workshops."
-        },
-        {
           "idUser": 2,
           "text": "taleb jabou taleb",
           "id": 673
+        },
+        {
+          "idUser": 2,
+          "text": "dqsd",
+          "id": 593
+        },
+        {
+          "idUser": 5,
+          "text": "qsdqsd",
+          "id": 381
         }
       ]
     },
@@ -149,6 +144,14 @@
       "username": "med",
       "email": "jabou@gmail.com",
       "password": "med",
+      "isAdmin": false,
+      "isMember": true
+    },
+    {
+      "id": 5,
+      "username": "taleb",
+      "email": "taleb@gmail.com",
+      "password": "taleb",
       "isAdmin": false,
       "isMember": true
     }

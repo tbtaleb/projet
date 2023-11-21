@@ -64,7 +64,10 @@
           class="list-group-item"
           *ngFor="let comment of selectedTraining.comments"
         >
-           <strong class="text-danger">{{ getUser(comment.idUser)?.username }}:</strong> {{ comment.text }}
+          <strong class="text-danger"
+            >{{ getUser(comment.idUser)?.username }}:</strong
+          >
+          {{ comment.text }}
         </li>
       </ul>
     </div>
