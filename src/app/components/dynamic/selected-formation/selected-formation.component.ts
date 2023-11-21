@@ -15,10 +15,9 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./selected-formation.component.css'],
 })
 export class SelectedFormationComponent implements OnInit {
-
   idf: number = 0;
   selectedTraining?: Formation;
-  newComment : Commentaire= new Commentaire(0,'',undefined)
+  newComment: Commentaire = new Commentaire(0, '', undefined);
   lesComments?: Commentaire[];
   lesUsers?: User[];
   commentForm!: FormGroup;
@@ -28,25 +27,24 @@ export class SelectedFormationComponent implements OnInit {
     private router: Router,
     private formationService: FormationService,
     private userService: UserService,
-    private formBuilder: FormBuilder,
-  ) {} 
-
- 
+    private formBuilder: FormBuilder
+  ) {}
 
   ngOnInit(): void {
     this.idf = this.activatedRoute.snapshot.params['idf'];
 
     this.commentForm = this.formBuilder.nonNullable.group({
       comment: [''],
-    })
+    });
 
-    this.userService.getUsers().subscribe(data =>{
+    this.userService.getUsers().subscribe((data) => {
       this.lesUsers = data;
-    })
+    });
 
     this.formationService.getFormationById(this.idf).subscribe({
       next: (formation) => {
         this.selectedTraining = formation;
+        console.log(this.selectedTraining);
       },
       error: (error) => {
         console.error(error);
@@ -54,12 +52,8 @@ export class SelectedFormationComponent implements OnInit {
     });
   }
 
-  getUser(userId: number):any {
-    this.userService.getUserById(userId).subscribe(data => {
-      console.log(data);
-      
-      return data;
-    })
+  getUser(userId: number): User | undefined {
+    return this.lesUsers?.find((user) => user.id === userId);
   }
 
   GoBack() {
@@ -73,24 +67,20 @@ export class SelectedFormationComponent implements OnInit {
   //  }
   onSubmitComment() {
     const loggedInUserId = 1; // Replace with the actual logged-in user ID
-    
+
     const newComment: Commentaire = new Commentaire(
       Helpers.generateUniqueId(),
       this.commentForm.value.comment,
-      loggedInUserId,
-    )
-
-    this.formationService.addComment(this.idf, newComment).subscribe(
-      {
-        next:(data) => {
-          if (!data) return
-
-          this.selectedTraining!.comments.push(data);
-          this.commentForm.reset();
-        }
-      }
+      loggedInUserId
     );
+
+    this.formationService.addComment(this.idf, newComment).subscribe({
+      next: (data) => {
+        if (!data) return;
+
+        this.selectedTraining!.comments.push(data);
+        this.commentForm.reset();
+      },
+    });
   }
-
-
 }

@@ -1,72 +1,73 @@
-<div *ngIf="!selectedTraining">
-  training not found
-</div>
+<div *ngIf="!selectedTraining">training not found</div>
 
 <div *ngIf="selectedTraining" class="bg">
-
-
-  <div   class="bg2">
-    <div style="display: flex;  ">
-      <img [src]="selectedTraining.photo" class="img">
-      <div style="margin-left: 50px;">
+  <div class="bg2">
+    <div style="display: flex">
+      <img [src]="selectedTraining.photo" class="img" />
+      <div style="margin-left: 50px">
         <h1>{{ selectedTraining.name }}</h1>
-        <hr style="border-top: solid">
-        <p>{{selectedTraining.description}}</p>
-        <hr style="border-top: solid">
-        <div style="display: flex;">
+        <hr style="border-top: solid" />
+        <p>{{ selectedTraining.description }}</p>
+        <hr style="border-top: solid" />
+        <div style="display: flex">
           <div>
-            Date: {{selectedTraining.date}} <br>
-            Location: {{selectedTraining.location}}
+            Date: {{ selectedTraining.date }} <br />
+            Location: {{ selectedTraining.location }}
           </div>
-          <div style="margin-left:50px ;">
-            {{selectedTraining.nbParticipant}} Spots Available <br>
-            <i class="fa-solid fa-check" style="color: #000000;" *ngIf="selectedTraining.certif"> Certified</i>
+          <div style="margin-left: 50px">
+            {{ selectedTraining.nbParticipant }} Spots Available <br />
+            <i
+              class="fa-solid fa-check"
+              style="color: #000000"
+              *ngIf="selectedTraining.certif"
+            >
+              Certified</i
+            >
           </div>
         </div>
-        <hr style="border-top: solid">
-        <div style="display: flex; justify-content: space-between;">
-          <div class="price">
-            {{selectedTraining.price}} TND
-          </div>
-          <button class="enroll">
-            Enroll Me
-          </button>
+        <hr style="border-top: solid" />
+        <div style="display: flex; justify-content: space-between">
+          <div class="price">{{ selectedTraining.price }} TND</div>
+          <button class="enroll">Enroll Me</button>
         </div>
-
       </div>
     </div>
-    <hr style="border-top: solid">
+    <hr style="border-top: solid" />
 
-    <div style="display: flex; justify-content: space-between;">
-
+    <div style="display: flex; justify-content: space-between">
       <div>
         <form [formGroup]="commentForm" (ngSubmit)="onSubmitComment()">
-          <div >
-            <input type="text" id="commentText" formControlName="comment" placeholder="Add a comment" style="width: 50vw; padding: 5px;border-radius: 10px;">
-            <button type="submit" style="padding: 5px;border-radius: 10px;">Submit</button>
+          <div>
+            <input
+              type="text"
+              id="commentText"
+              formControlName="comment"
+              placeholder="Add a comment"
+              style="width: 50vw; padding: 5px; border-radius: 10px"
+            />
+            <button type="submit" style="padding: 5px; border-radius: 10px">
+              Submit
+            </button>
           </div>
-          
         </form>
       </div>
     </div>
   </div>
   <div class="bg3">
     <h1>Comment</h1>
-    <hr style="border-top: solid">
+    <hr style="border-top: solid" />
 
-    <div style="max-height:45vh ;min-height: 45vh; overflow-y: scroll">
-      <ul class="list-group" >
-       
-          <li style="color: black; border-radius: 10px;" class="list-group-item" *ngFor="let comment of selectedTraining.comments ">
-            
-              <!-- {{getUser(comment.idUser).username}} 
-              <p style="font-size:12px; color: gray;">taelb</p>
-              {{ comment.text }}
-             -->
-          </li>
+    <div style="max-height: 45vh; min-height: 45vh; overflow-y: scroll">
+      <ul class="list-group">
+        <li
+          style="color: black; border-radius: 10px"
+          class="list-group-item"
+          *ngFor="let comment of selectedTraining.comments"
+        >
+           <strong class="text-danger">{{ getUser(comment.idUser)?.username }}:</strong> {{ comment.text }}
+        </li>
       </ul>
     </div>
-    <hr style="border-top: solid">
+    <hr style="border-top: solid" />
   </div>
-  
 </div>
