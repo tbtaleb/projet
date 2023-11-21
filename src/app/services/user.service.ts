@@ -3,7 +3,7 @@ import { Observable, map, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { User } from '../classes/user';
 
-const usersUrl = 'http://localhost:3500/user';
+const usersUrl = 'http://localhost:3000/user';
 
 @Injectable({
   providedIn: 'root',
@@ -18,16 +18,14 @@ export class UserService {
   addUser(user: User): Observable<User> {
     return this.http.post<User>(usersUrl, user);
   }
-   getUsers(): Observable<User[]> {
+
+  getUsers(): Observable<User[]> {
     return this.http.get<User[]>(usersUrl);
   }
 
-<<<<<<< Updated upstream
-=======
-  getUserById(id: number): Observable<User | undefined> {
+  getUserById(id: number): Observable<User> {
     return this.http.get<User>(usersUrl+"/"+id);
   }
 
->>>>>>> Stashed changes
   
 }

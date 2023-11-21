@@ -1,6 +1,11 @@
-<div class="bg">
+<div *ngIf="!selectedTraining">
+  training not found
+</div>
 
-  <div class="bg2">
+<div *ngIf="selectedTraining" class="bg">
+
+
+  <div   class="bg2">
     <div style="display: flex;  ">
       <img [src]="selectedTraining.photo" class="img">
       <div style="margin-left: 50px;">
@@ -51,18 +56,14 @@
 
     <div style="max-height:45vh ;min-height: 45vh; overflow-y: scroll">
       <ul class="list-group" >
-        <ng-container *ngFor="let comment of lesComments ">
-          <li style="color: black; border-radius: 10px;" class="list-group-item">
-            <ng-container *ngIf="getUser(comment.idUser) as user; else loadingUser">
-              <!-- {{ user.forEach }}: -->
+       
+          <li style="color: black; border-radius: 10px;" class="list-group-item" *ngFor="let comment of selectedTraining.comments ">
+            
+              <!-- {{getUser(comment.idUser).username}} 
               <p style="font-size:12px; color: gray;">taelb</p>
               {{ comment.text }}
-            </ng-container>
-            <ng-template #loadingUser>
-              Loading user...
-            </ng-template>
+             -->
           </li>
-        </ng-container>
       </ul>
     </div>
     <hr style="border-top: solid">

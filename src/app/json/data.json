@@ -1,5 +1,5 @@
 {
-  "formation": [
+      "formation": [
     {
       "id": 1,
       "name": "Game Development Fundamentals",
@@ -100,6 +100,40 @@
       "certif": true,
       "workshop": true,
       "location": "Hybrid"
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin123",
+      "email": "admin@example.com",
+      "isAdmin": true,
+      "isMember": true
+    },
+    {
+      "id": 2,
+      "username": "user1",
+      "password": "user123",
+      "email": "user1@example.com",
+      "isAdmin": false,
+      "isMember": true
+    },
+    {
+      "id": 3,
+      "username": "user2",
+      "password": "user456",
+      "email": "user2@example.com",
+      "isAdmin": false,
+      "isMember": true
+    },
+    {
+      "id": 4,
+      "username": "med",
+      "email": "jabou@gmail.com",
+      "password": "med",
+      "isAdmin": false,
+      "isMember": true
     }
   ]
 }

@@ -21,7 +21,7 @@ export class FormationService {
     return this.http.get<Formation>(url+"/"+id);
   }
 
-  addComment(formationId: number, comment: Commentaire): Observable<Formation | undefined> {
+  addComment(formationId: number, comment: Commentaire): Observable<Commentaire| undefined> {
     return this.getFormationById(formationId).pipe(
       map((formation) => {
         if (formation) {
@@ -30,7 +30,7 @@ export class FormationService {
           }
           formation.comments.push(comment);
         }
-        return formation;
+        return comment;
       })
     );
   }
