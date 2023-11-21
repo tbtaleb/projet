@@ -6,6 +6,7 @@ import { Commentaire } from 'src/app/classes/commentaire';
 import { Formation } from 'src/app/classes/formation';
 import { User } from 'src/app/classes/user';
 import { Helpers } from 'src/app/helpers/helpers';
+import { AuthService } from 'src/app/services/auth.service';
 import { FormationService } from 'src/app/services/formation.service';
 import { UserService } from 'src/app/services/user.service';
 
@@ -27,7 +28,8 @@ export class SelectedFormationComponent implements OnInit {
     private router: Router,
     private formationService: FormationService,
     private userService: UserService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private authService:AuthService
   ) {}
 
   ngOnInit(): void {
@@ -65,22 +67,28 @@ export class SelectedFormationComponent implements OnInit {
   //     this.newComment.text = '';
   //   });
   //  }
-  onSubmitComment() {
-    const loggedInUserId = 1; // Replace with the actual logged-in user ID
-
+ onSubmitComment() {
+  const loggedInUserId = this.authService.getCurrentUserId();
+  console.log(loggedInUserId);
+  
+  if (loggedInUserId) {
     const newComment: Commentaire = new Commentaire(
-      Helpers.generateUniqueId(),
+      +loggedInUserId,
       this.commentForm.value.comment,
-      loggedInUserId
+      Helpers.generateUniqueId()
     );
+  this.selectedTraining!.comments.push(newComment);
+  
+  this.formationService.updateFormation(this.selectedTraining!).subscribe({
+    next: (updatedFormation) => {
+      console.log('Formation mise à jour avec succès', updatedFormation);
+      this.commentForm.reset();
+    },
+    error: (error) => {
+      console.error('Erreur lors de la mise à jour de la formation', error);
+    },
+  });
+}
+}
 
-    this.formationService.addComment(this.idf, newComment).subscribe({
-      next: (data) => {
-        if (!data) return;
-
-        this.selectedTraining!.comments.push(data);
-        this.commentForm.reset();
-      },
-    });
-  }
 }

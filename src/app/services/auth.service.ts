@@ -10,11 +10,15 @@ import { UserService } from './user.service';
 })
 export class AuthService {
   private usersUrl = 'http://localhost:3500/user'; // Adjust the URL based on your project structure
-
+  private readonly USER_ID_KEY = 'user_id';
   private authenticated = false;
   private isAdmin = false;
 
-  constructor(private http: HttpClient, private router: Router,private userService:UserService) {}
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+    private userService: UserService
+  ) {}
 
   login(username: string, password: string): void {
     this.userService.getUsers().subscribe((users) => {
@@ -24,6 +28,7 @@ export class AuthService {
 
       if (authenticatedUser) {
         this.authenticated = true;
+        localStorage.setItem(this.USER_ID_KEY, authenticatedUser.id.toString());
         this.isAdmin = authenticatedUser.isAdmin;
 
         if (this.isAdmin) {
@@ -56,5 +61,13 @@ export class AuthService {
     this.authenticated = value;
   }
 
- 
+  getCurrentUserId(): string | null {
+    const storedUserId = localStorage.getItem(this.USER_ID_KEY);
+
+    if (storedUserId) {
+      return storedUserId;
+    } else {
+      return null;
+    }
+  }
 }

@@ -18,10 +18,15 @@ export class FormationService {
   }
 
   getFormationById(id: number): Observable<Formation | undefined> {
-    return this.http.get<Formation>(url+"/"+id);
+    return this.http.get<Formation>(url + '/' + id);
   }
-
-  addComment(formationId: number, comment: Commentaire): Observable<Commentaire| undefined> {
+  updateFormation(formation: Formation): Observable<Formation> {
+    return this.http.put<Formation>(url + '/' + formation.id, formation);
+  }
+  addComment(
+    formationId: number,
+    comment: Commentaire
+  ): Observable<Commentaire | undefined> {
     return this.getFormationById(formationId).pipe(
       map((formation) => {
         if (formation) {
@@ -34,7 +39,6 @@ export class FormationService {
       })
     );
   }
-
 
   // addComment (formationId:number,comment:Commentaire):void{
   //   let formation=this.getFormationById(formationId)
