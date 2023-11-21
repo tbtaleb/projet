@@ -2,17 +2,18 @@
   font-family: chakrabold;
 }
 .bg {
+  justify-content: space-between;
   min-height: 100vh;
   width: auto;
   background: #020024;
   background: linear-gradient(36deg, rgb(1, 0, 22) 0%, rgba(70, 7, 236, 1) 100%);
-  padding: 10px;
+  padding: 15px;
   display: flex;
   align-items: center;
 }
 
 .bg2 {
-  margin: auto;
+  
   padding: 30px;
   background-color: aliceblue;
   border-radius: 30px;
@@ -22,6 +23,18 @@
   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.662);
   height: 70vh;
   width: 70vw;
+}
+
+.bg3{
+  padding: 30px;
+  background-color: aliceblue;
+  border-radius: 30px;
+  border-width: bold;
+  border-color: blueviolet;
+  height: 70vh;
+  width: 25vw;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.662);
+  float: left;
 }
 
 .img{

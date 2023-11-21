@@ -12,7 +12,6 @@ export class FormationListComponent implements OnInit {
   selectedTraining: any | null = null;
   ngOnInit(): void {
     this.formatioService.getFormation().subscribe((data) => {
-      console.log(data);
       this.lesFormations = data;
     });
   }

@@ -22,5 +22,12 @@ export class UserService {
     return this.http.get<User[]>(usersUrl);
   }
 
+<<<<<<< Updated upstream
+=======
+  getUserById(id: number): Observable<User | undefined> {
+    return this.http.get<User>(usersUrl+"/"+id);
+  }
+
+>>>>>>> Stashed changes
   
 }
