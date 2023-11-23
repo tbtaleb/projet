@@ -14,7 +14,7 @@ export class NavbarComponent {
   @HostListener('window:scroll', [])
   @HostListener('window:resize', [])
   onWindowScroll() {
-    if (window.scrollY > 60 || window.innerWidth <= 991.9) {
+    if (window.scrollY > 60 || window.innerWidth <= 1000.9) {
       this.isScrolled = true;
     } else {
       this.isScrolled = false;

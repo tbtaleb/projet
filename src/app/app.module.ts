@@ -26,10 +26,12 @@ import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './components/dynamic/dashboard/dashboard.component';
 import { AdmiNavBarComponent } from './components/fixed/admi-nav-bar/admi-nav-bar.component';
 
-import { AdminSideBarComponent } from './components/fixed/admin-side-bar/admin-side-bar.component';
+
 import { UserListComponent } from './components/dynamic/user-list/user-list.component';
 import { StaticsComponent } from './components/dynamic/statics/statics.component';
 import { AdminFormationListComponent } from './components/dynamic/admin-formation-list/admin-formation-list.component';
+import { AdminFormtionFormComponent } from './components/dynamic/admin-formtion-form/admin-formtion-form.component';
+import { AdminSideBarComponent } from './components/fixed/admin-side-bar/admin-side-bar.component';
 
 
 @NgModule({
@@ -53,6 +55,7 @@ import { AdminFormationListComponent } from './components/dynamic/admin-formatio
     UserListComponent,
     StaticsComponent,
     AdminFormationListComponent,
+    AdminFormtionFormComponent,
   ],
   imports: [
     FormsModule,

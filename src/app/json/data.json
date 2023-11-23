@@ -11,34 +11,7 @@
       "certif": true,
       "workshop": false,
       "location": "Virtual",
-      "comments": [
-        {
-          "idUser": 2,
-          "text": "taleb jabou taleb",
-          "id": 673
-        },
-        {
-          "idUser": 2,
-          "text": "dqsd",
-          "id": 593
-        },
-        {
-          "idUser": 5,
-          "text": "qsdqsd",
-          "id": 381
-        },
-        {
-          "idUser": 5,
-          "text": "3ejbetni waslou ",
-          "id": 818
-        },
-        {
-          "idUser": 2,
-          "text": "bayrem 9alkom behya",
-          "id": 242
-        }
-        
-      ]
+      "comments": []
     },
     {
       "id": 2,
@@ -50,7 +23,8 @@
       "nbParticipant": 15,
       "certif": true,
       "workshop": true,
-      "location": "Online"
+      "location": "Online",
+      "comments": []
     },
     {
       "id": 3,
@@ -115,19 +89,6 @@
       "certif": true,
       "workshop": false,
       "location": "In-Person",
-      "comments": []
-    },
-    {
-      "id": 8,
-      "name": "Game Testing and Quality Assurance",
-      "description": "Understand the importance of game testing and quality assurance in the game development lifecycle.",
-      "photo": "../assets/trainings.jpg",
-      "date": "2023-09-15",
-      "price": 149.99,
-      "nbParticipant": 25,
-      "certif": true,
-      "workshop": true,
-      "location": "Hybrid",
       "comments": []
     }
   ],

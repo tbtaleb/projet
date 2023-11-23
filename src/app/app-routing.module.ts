@@ -14,6 +14,7 @@ import { DashboardComponent } from './components/dynamic/dashboard/dashboard.com
 import { UserListComponent } from './components/dynamic/user-list/user-list.component';
 import { StaticsComponent } from './components/dynamic/statics/statics.component';
 import { AdminFormationListComponent } from './components/dynamic/admin-formation-list/admin-formation-list.component';
+import { AdminFormtionFormComponent } from './components/dynamic/admin-formtion-form/admin-formtion-form.component';
 
 const routes: Routes = [
   { path: 'landingpage', title: 'Welcome', component: LandingPageComponent },
@@ -37,10 +38,14 @@ const routes: Routes = [
     title: 'FormationDetail',
     component: SelectedFormationComponent,
   },
+  { path: 'dashboard/formations', component: AdminFormationListComponent },
+  { path: 'dashboard/formations/form', component: AdminFormtionFormComponent },
+  { path: 'dashboard/formations/form/:id', component: AdminFormtionFormComponent },
   {
     path: 'dashboard',
     title: 'Dashboard',
     component: DashboardComponent,
+    // canActivate: [AuthGuard],
     children: [
       {
         path: 'statics',

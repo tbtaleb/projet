@@ -16,6 +16,7 @@ export class FormationService {
   getAllFormation(): Observable<Formation[]> {
     return this.http.get<Formation[]>(url);
   }
+
   getFormation(
     searchValue: string,
     typeValue: number
@@ -37,33 +38,15 @@ export class FormationService {
     return this.http.get<Formation>(url + '/' + id);
   }
 
+  addFormation(formation: Formation): Observable<Formation> {
+    return this.http.post<Formation>(url, formation);
+  }
   updateFormation(formation: Formation): Observable<Formation> {
-    return this.http.put<Formation>(url + '/' + formation.id, formation);
+    const updateUrl = `${url}/${formation.id}`;
+    console.log('ID de la formation à mettre à jour :', formation.id);
+    return this.http.put<Formation>(updateUrl, formation);
   }
-
-  addComment(
-    formationId: number,
-    comment: Commentaire
-  ): Observable<Commentaire | undefined> {
-    return this.getFormationById(formationId).pipe(
-      map((formation) => {
-        if (formation) {
-          if (!formation.comments) {
-            formation.comments = [];
-          }
-          formation.comments.push(comment);
-        }
-        return comment;
-      })
-    );
+  deleteFormation(id: number): Observable<void> {
+    return this.http.delete<void>(url + '/' + id);
   }
-
-  // addComment (formationId:number,comment:Commentaire):void{
-  //   let formation=this.getFormationById(formationId)
-  //   if(formation){
-  //     if (!formation.comments) {
-  //       formation.comments = [];
-  //   }
-  //   }
-  // }
 }
