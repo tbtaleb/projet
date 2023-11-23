@@ -100,21 +100,35 @@ export class SelectedFormationComponent implements OnInit {
     }
   }
 
-  enrollState:string="Enroll me"
-  enrollButtonState:boolean=false
+  enrollState: string = "Enroll me";
+  enrollBool: boolean = false;
 
-  enrollMe(): boolean{
-    const enrolledTraining :Formation | undefined= this.selectedTraining;
-    if( enrolledTraining !== undefined){
+  enrollMe() {
+
+    const enrolledTraining: Formation | undefined = this.selectedTraining;
+
+    if (enrolledTraining != undefined) {
       this.loggedinUser.formation.push(enrolledTraining);
       console.log(this.loggedinUser.formation);
-      this.enrollState="Enrolled";
-      this.enrollButtonState=true;
-      return true;
-    }else{
-      return false
+      this.enrollState = "Enrolled";
+      this.userService.updateUser(this.loggedinUser!).subscribe(
+        (updatedUser) => {
+          console.log('User updated successfully:', updatedUser);
+        },
+        (error) => {
+          console.error('Error updating user:', error);
+        }
+      );
+      this.enrollBool = true;
+    } else {
+      this.enrollBool = false;
     }
-    }
-    
   }
+
+  isEnrolled():boolean{
+    return this.loggedinUser.formation.some(
+      (data) => data.id === this.selectedTraining?.id
+    );
+  }
+}
 

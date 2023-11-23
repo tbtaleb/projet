@@ -36,8 +36,12 @@
           "idUser": 2,
           "text": "bayrem 9alkom behya",
           "id": 242
+        },
+        {
+          "idUser": 2,
+          "text": "blablablab",
+          "id": 93
         }
-        
       ]
     },
     {
@@ -128,7 +132,23 @@
       "certif": true,
       "workshop": true,
       "location": "Hybrid",
-      "comments": []
+      "comments": [
+        {
+          "idUser": 2,
+          "text": "vraiment ya3tikom essa7a",
+          "id": 772
+        },
+        {
+          "idUser": 5,
+          "text": "user1 nikomk",
+          "id": 425
+        },
+        {
+          "idUser": 5,
+          "text": "aeq",
+          "id": 246
+        }
+      ]
     }
   ],
   "user": [
@@ -148,7 +168,64 @@
       "email": "user1@example.com",
       "isAdmin": false,
       "isMember": true,
-      "formation": []
+      "formation": [
+        {
+          "id": 1,
+          "name": "Game Development Fundamentals",
+          "description": "Explore the basics of game development using popular game engines.",
+          "photo": "../assets/trainings.jpg",
+          "date": "2023-02-15",
+          "price": 129.99,
+          "nbParticipant": 20,
+          "certif": true,
+          "workshop": false,
+          "location": "Virtual",
+          "comments": [
+            {
+              "idUser": 2,
+              "text": "taleb jabou taleb",
+              "id": 673
+            },
+            {
+              "idUser": 2,
+              "text": "dqsd",
+              "id": 593
+            },
+            {
+              "idUser": 5,
+              "text": "qsdqsd",
+              "id": 381
+            },
+            {
+              "idUser": 5,
+              "text": "3ejbetni waslou ",
+              "id": 818
+            },
+            {
+              "idUser": 2,
+              "text": "bayrem 9alkom behya",
+              "id": 242
+            },
+            {
+              "idUser": 2,
+              "text": "blablablab",
+              "id": 93
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Unity3D Game Programming",
+          "description": "Learn game programming with Unity3D for creating immersive gaming experiences.",
+          "photo": "../assets/trainings.jpg",
+          "date": "2023-03-10",
+          "price": 179.99,
+          "nbParticipant": 15,
+          "certif": true,
+          "workshop": true,
+          "location": "Online"
+        }
+      ]
     },
     {
       "id": 3,
@@ -175,7 +252,32 @@
       "password": "taleb",
       "isAdmin": false,
       "isMember": true,
-      "formation": []
+      "formation": [
+        {
+          "id": 8,
+          "name": "Game Testing and Quality Assurance",
+          "description": "Understand the importance of game testing and quality assurance in the game development lifecycle.",
+          "photo": "../assets/trainings.jpg",
+          "date": "2023-09-15",
+          "price": 149.99,
+          "nbParticipant": 25,
+          "certif": true,
+          "workshop": true,
+          "location": "Hybrid",
+          "comments": [
+            {
+              "idUser": 2,
+              "text": "vraiment ya3tikom essa7a",
+              "id": 772
+            },
+            {
+              "idUser": 5,
+              "text": "user1 nikomk",
+              "id": 425
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -41,29 +41,20 @@ export class FormationService {
     return this.http.put<Formation>(url + '/' + formation.id, formation);
   }
 
-  addComment(
-    formationId: number,
-    comment: Commentaire
-  ): Observable<Commentaire | undefined> {
-    return this.getFormationById(formationId).pipe(
-      map((formation) => {
-        if (formation) {
-          if (!formation.comments) {
-            formation.comments = [];
-          }
-          formation.comments.push(comment);
-        }
-        return comment;
-      })
-    );
-  }
-
-  // addComment (formationId:number,comment:Commentaire):void{
-  //   let formation=this.getFormationById(formationId)
-  //   if(formation){
-  //     if (!formation.comments) {
-  //       formation.comments = [];
-  //   }
-  //   }
+  // addComment(
+  //   formationId: number,
+  //   comment: Commentaire
+  // ): Observable<Commentaire | undefined> {
+  //   return this.getFormationById(formationId).pipe(
+  //     map((formation) => {
+  //       if (formation) {
+  //         if (!formation.comments) {
+  //           formation.comments = [];
+  //         }
+  //         formation.comments.push(comment);
+  //       }
+  //       return comment;
+  //     })
+  //   );
   // }
 }
