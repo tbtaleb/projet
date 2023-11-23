@@ -23,7 +23,8 @@
         <hr style="border-top: solid" />
         <div style="display: flex; justify-content: space-between">
           <div class="price">{{ selectedTraining.price }} TND</div>
-          <button class="enroll" (click)="enrollMe()" [disabled]="enrollButtonState">{{enrollState}}</button>
+          <button class="enroll" (click)="enrollMe()" *ngIf="!isEnrolled()">Enroll Me</button>
+          <button class="enroll"  *ngIf="isEnrolled()">Enrolled</button>
         </div>
       </div>
     </div>
