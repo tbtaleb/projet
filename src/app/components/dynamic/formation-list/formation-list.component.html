@@ -1,15 +1,19 @@
 <div class="bg">
-  <div class="container-fluid my-3" style="width: 50rem">
-    <form class="d-flex" role="search" [formGroup]="searchForm" (ngSubmit)="onSearchSubmit()">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" formControlName="searchValue" />
-      <button class="btn btn-outline-light" type="submit" >Search</button>
-    </form>
+  <form  role="search" [formGroup]="searchForm" (ngSubmit)="onSearchSubmit()">
+  <div class="d-flex container-fluid my-3" style="width: 50rem">
+
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+      formControlName="searchValue" />
+    <button class="btn btn-outline-light" type="submit">Search</button>
+
   </div>
-  <select class="form-select container-fluid" aria-label="Default select example" style="width: 48.5rem" formControlName="typeValue">
-    <option selected>Open this select menu</option>
+  <select class="form-select container-fluid" aria-label="Default select example" style="width: 48.5rem"
+    formControlName="typeValue" (change)="onSearchSubmit()">
+    <option value="0" selected>Open this select menu</option>
     <option value="1">Training</option>
-    <option value="2">Workship</option>
+    <option value="2">Workshop</option>
   </select>
+  </form>
   <h2 class="title m-5">workshops <span>&</span> trainings:</h2>
   <div class="training-list container">
     <div class="row gy-3">

@@ -23,7 +23,7 @@
         <hr style="border-top: solid" />
         <div style="display: flex; justify-content: space-between">
           <div class="price">{{ selectedTraining.price }} TND</div>
-          <button class="enroll">Enroll Me</button>
+          <button class="enroll" (click)="enrollMe()" [disabled]="enrollButtonState">{{enrollState}}</button>
         </div>
       </div>
     </div>

@@ -1,3 +1,5 @@
+import { Formation } from "./formation";
+
 export class User {
   constructor(
     public id: number,
@@ -5,6 +7,7 @@ export class User {
     public password: string,
     public email: string,
     public isAdmin: boolean,
-    public isMember: boolean
+    public isMember: boolean,
+    public formation : Formation[],
   ) {}
 }

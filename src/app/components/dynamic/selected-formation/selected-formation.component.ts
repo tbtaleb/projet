@@ -15,6 +15,8 @@ import { UserService } from 'src/app/services/user.service';
   templateUrl: './selected-formation.component.html',
   styleUrls: ['./selected-formation.component.css'],
 })
+
+
 export class SelectedFormationComponent implements OnInit {
   idf: number = 0;
   selectedTraining?: Formation;
@@ -22,6 +24,7 @@ export class SelectedFormationComponent implements OnInit {
   lesComments?: Commentaire[];
   lesUsers?: User[];
   commentForm!: FormGroup;
+  loggedinUser !: User;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -29,8 +32,8 @@ export class SelectedFormationComponent implements OnInit {
     private formationService: FormationService,
     private userService: UserService,
     private formBuilder: FormBuilder,
-    private authService:AuthService
-  ) {}
+    private authService: AuthService
+  ) { }
 
   ngOnInit(): void {
     this.idf = this.activatedRoute.snapshot.params['idf'];
@@ -52,6 +55,17 @@ export class SelectedFormationComponent implements OnInit {
         console.error(error);
       },
     });
+
+    const loggedInUserId = this.authService.getCurrentUserId();
+    this.userService.getUserById(Number(loggedInUserId)).subscribe({
+      next: (u) => {
+        this.loggedinUser = u;
+        console.log(this.selectedTraining);
+      },
+      error: (error) => {
+        console.error(error);
+      },
+    })
   }
 
   getUser(userId: number): User | undefined {
@@ -61,29 +75,46 @@ export class SelectedFormationComponent implements OnInit {
   GoBack() {
     this.router.navigate(['/formationList']);
   }
- 
- onSubmitComment() {
-  const loggedInUserId = this.authService.getCurrentUserId();
-  console.log(loggedInUserId);
-  
-  if (loggedInUserId && this.commentForm.value.comment) {
-    const newComment: Commentaire = new Commentaire(
-      +loggedInUserId,
-      this.commentForm.value.comment,
-      Helpers.generateUniqueId()
-    );
-  this.selectedTraining!.comments.push(newComment);
-  
-  this.formationService.updateFormation(this.selectedTraining!).subscribe({
-    next: (updatedFormation) => {
-      console.log('Formation mise à jour avec succès', updatedFormation);
-      this.commentForm.reset();
-    },
-    error: (error) => {
-      console.error('Erreur lors de la mise à jour de la formation', error);
-    },
-  });
-}
-}
 
-}
+  onSubmitComment() {
+    const loggedInUserId = this.authService.getCurrentUserId();
+    console.log(loggedInUserId);
+
+    if (loggedInUserId && this.commentForm.value.comment) {
+      const newComment: Commentaire = new Commentaire(
+        +loggedInUserId,
+        this.commentForm.value.comment,
+        Helpers.generateUniqueId()
+      );
+      this.selectedTraining!.comments.push(newComment);
+
+      this.formationService.updateFormation(this.selectedTraining!).subscribe({
+        next: (updatedFormation) => {
+          console.log('Formation mise à jour avec succès', updatedFormation);
+          this.commentForm.reset();
+        },
+        error: (error) => {
+          console.error('Erreur lors de la mise à jour de la formation', error);
+        },
+      });
+    }
+  }
+
+  enrollState:string="Enroll me"
+  enrollButtonState:boolean=false
+
+  enrollMe(): boolean{
+    const enrolledTraining :Formation | undefined= this.selectedTraining;
+    if( enrolledTraining !== undefined){
+      this.loggedinUser.formation.push(enrolledTraining);
+      console.log(this.loggedinUser.formation);
+      this.enrollState="Enrolled";
+      this.enrollButtonState=true;
+      return true;
+    }else{
+      return false
+    }
+    }
+    
+  }
+

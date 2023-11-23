@@ -18,11 +18,19 @@ export class FormationService {
   }
   getFormation(
     searchValue: string,
-    typeValue: string
+    typeValue: number
   ): Observable<Formation[]> {
-    return this.http.get<Formation[]>(
-      ` http://localhost:3000/formation?name_like=${searchValue || typeValue}`
-    );
+    if (typeValue == 1) {
+      return this.http.get<Formation[]>(
+        ` ${url}?name_like=${searchValue}&workshop=true`
+      );
+    } else if (typeValue == 2) {
+      return this.http.get<Formation[]>(
+        ` ${url}?name_like=${searchValue}&workshop=false`
+      );
+    } else {
+      return this.http.get<Formation[]>(` ${url}?name_like=${searchValue}`);
+    }
   }
 
   getFormationById(id: number): Observable<Formation | undefined> {

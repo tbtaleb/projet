@@ -37,6 +37,7 @@
           "text": "bayrem 9alkom behya",
           "id": 242
         }
+        
       ]
     },
     {
@@ -137,7 +138,8 @@
       "password": "admin123",
       "email": "admin@example.com",
       "isAdmin": true,
-      "isMember": true
+      "isMember": true,
+      "formation": []
     },
     {
       "id": 2,
@@ -145,7 +147,8 @@
       "password": "user123",
       "email": "user1@example.com",
       "isAdmin": false,
-      "isMember": true
+      "isMember": true,
+      "formation": []
     },
     {
       "id": 3,
@@ -153,7 +156,8 @@
       "password": "user456",
       "email": "user2@example.com",
       "isAdmin": false,
-      "isMember": true
+      "isMember": true,
+      "formation": []
     },
     {
       "id": 4,
@@ -161,7 +165,8 @@
       "email": "jabou@gmail.com",
       "password": "med",
       "isAdmin": false,
-      "isMember": true
+      "isMember": true,
+      "formation": []
     },
     {
       "id": 5,
@@ -169,7 +174,8 @@
       "email": "taleb@gmail.com",
       "password": "taleb",
       "isAdmin": false,
-      "isMember": true
+      "isMember": true,
+      "formation": []
     }
   ]
 }

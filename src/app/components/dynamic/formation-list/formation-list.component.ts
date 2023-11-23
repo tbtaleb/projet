@@ -14,7 +14,7 @@ export class FormationListComponent implements OnInit {
   selectedTraining: any | null = null;
   lesFormations: Formation[] = [];
   searchValue='';
-  typeValue ='';
+  typeValue =0;
 
   constructor(
     private formatioService: FormationService,
@@ -23,22 +23,22 @@ export class FormationListComponent implements OnInit {
   ) {}
   
   searchForm = this.fb.nonNullable.group({
-    searchValue:'',
-    typeValue:'',
+    searchValue:[''],
+    typeValue:[0],
   });
 
   ngOnInit(): void {
     this.fetchData();
-    
+    this.typeValue = this.searchForm.value.typeValue ?? 0;
   }
 
   fetchData(): void {
-    this.formatioService.getFormation(this.searchValue, this.typeValue).subscribe((data) => {
+    this.formatioService.getFormation(this.searchValue,this.typeValue).subscribe((data) => {
+      console.log(this.typeValue);
+      
         this.lesFormations = data;
     });
 }
-
-  
 
   showDetails(training: any): void {
     this.selectedTraining = training;
@@ -49,14 +49,16 @@ export class FormationListComponent implements OnInit {
   }
 
   onClick(id: number) {
-    // Naviguer vers la nouvelle page lorsque la div est cliquée
     this.router.navigate(['/formationList/'+id]);
     
   }
 
   onSearchSubmit():void{
-    this.typeValue = this.searchForm.value.typeValue ?? '';
+    this.typeValue = this.searchForm.value.typeValue ?? 0;
     this.searchValue = this.searchForm.value.searchValue ?? '';
     this.fetchData();
   }
+
+  
+
 }

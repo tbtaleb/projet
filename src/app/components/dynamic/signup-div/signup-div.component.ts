@@ -40,6 +40,7 @@ export class SignupDivComponent {
         password: this.signupForm.value.password,
         isAdmin: false,
         isMember: true,
+        formation:[]
       };
 
       this.userService.addUser(newUser).subscribe(() => {
