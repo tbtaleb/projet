@@ -30,8 +30,12 @@ import { AdmiNavBarComponent } from './components/fixed/admi-nav-bar/admi-nav-ba
 import { UserListComponent } from './components/dynamic/user-list/user-list.component';
 import { StaticsComponent } from './components/dynamic/statics/statics.component';
 import { AdminFormationListComponent } from './components/dynamic/admin-formation-list/admin-formation-list.component';
+<<<<<<< Updated upstream
 import { AdminFormtionFormComponent } from './components/dynamic/admin-formtion-form/admin-formtion-form.component';
 import { AdminSideBarComponent } from './components/fixed/admin-side-bar/admin-side-bar.component';
+=======
+import { UserPageComponent } from './components/dynamic/user-page/user-page.component';
+>>>>>>> Stashed changes
 
 
 @NgModule({
@@ -55,7 +59,11 @@ import { AdminSideBarComponent } from './components/fixed/admin-side-bar/admin-s
     UserListComponent,
     StaticsComponent,
     AdminFormationListComponent,
+<<<<<<< Updated upstream
     AdminFormtionFormComponent,
+=======
+    UserPageComponent,
+>>>>>>> Stashed changes
   ],
   imports: [
     FormsModule,
