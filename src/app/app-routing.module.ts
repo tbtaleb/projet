@@ -11,6 +11,9 @@ import { MainComponent } from './components/dynamic/main/main.component';
 import { AboutUsComponent } from './components/dynamic/about-us/about-us.component';
 import { AuthGuard } from './guard/auth.guard';
 import { DashboardComponent } from './components/dynamic/dashboard/dashboard.component';
+import { UserListComponent } from './components/dynamic/user-list/user-list.component';
+import { StaticsComponent } from './components/dynamic/statics/statics.component';
+import { AdminFormationListComponent } from './components/dynamic/admin-formation-list/admin-formation-list.component';
 
 const routes: Routes = [
   { path: 'landingpage', title: 'Welcome', component: LandingPageComponent },
@@ -38,6 +41,24 @@ const routes: Routes = [
     path: 'dashboard',
     title: 'Dashboard',
     component: DashboardComponent,
+    children: [
+      {
+        path: 'statics',
+        title: 'statics',
+        component: StaticsComponent,
+      },
+      {
+        path: 'usersList',
+        title: 'usersList',
+        component: UserListComponent,
+      },
+      {
+        path: 'ActivityList',
+        title: 'ActivityList',
+        component: AdminFormationListComponent,
+      },
+      { path: '', redirectTo: 'statics', pathMatch: 'full' },
+    ],
   },
   {
     path: 'home',
@@ -64,7 +85,7 @@ const routes: Routes = [
     ],
   },
   { path: '', redirectTo: 'landingpage', pathMatch: 'full' },
-  { path: '**', redirectTo: 'landingpage', pathMatch: 'full' }
+  { path: '**', redirectTo: 'landingpage', pathMatch: 'full' },
 ];
 
 @NgModule({

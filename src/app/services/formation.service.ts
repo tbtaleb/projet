@@ -13,9 +13,15 @@ const url = 'http://localhost:3000/formation';
 export class FormationService {
   constructor(private http: HttpClient) {}
 
-  getFormation(searchValue: string, typeValue: string): Observable<Formation[]> {
+  getAllFormation(): Observable<Formation[]> {
+    return this.http.get<Formation[]>(url);
+  }
+  getFormation(
+    searchValue: string,
+    typeValue: string
+  ): Observable<Formation[]> {
     return this.http.get<Formation[]>(
-     ` http://localhost:3000/formation?name_like=${searchValue || typeValue}`,
+      ` http://localhost:3000/formation?name_like=${searchValue || typeValue}`
     );
   }
 

@@ -1,0 +1,51 @@
+<div class="page-wrapper">
+  <div class="content">
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-8 col-xl-12">
+        <div class="card">
+          <div class="card-header">
+            <h4 class="card-title d-inline-block">Activity List</h4>
+            <a href="#" class="btn btn-primary float-right">Add Activity</a>
+          </div>
+          <div class="card-block scrollList">
+            <div class="table-responsive">
+              <table class="table mb-0 new-patient-table">
+                <tbody>
+                  <tr *ngFor="let formation of lesFormation">
+                    <td>
+                      <img
+                        width="28"
+                        height="28"
+                        class="rounded-circle"
+                        src="assets/animusBlack.png"
+                        alt=""
+                      />
+                      <h2>{{ formation.name }}</h2>
+                    </td>
+                    <td>{{ formation.location }}</td>
+                    <td>{{ formation.date }}</td>
+                    <td>{{ formation.nbParticipant }}</td>
+                    <td>
+                      <button
+                        class="btn btn-warning btn-primary-one float-right"
+                      >
+                        Modify
+                      </button>
+                    </td>
+                    <td>
+                      <button
+                        class="btn btn-danger btn-primary-one float-right"
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

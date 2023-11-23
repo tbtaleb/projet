@@ -32,7 +32,7 @@ export class NavbarComponent {
   showAlert() {
     if (!this.logedIn) {
       alert('you should log in first');
+      this.router.navigate(['/home']);
     }
-    this.router.navigate(['/home']);
   }
 }
