@@ -61,12 +61,7 @@ export class SelectedFormationComponent implements OnInit {
   GoBack() {
     this.router.navigate(['/formationList']);
   }
-  // onSubmitComment() {
-  //   this.formationService.addComment(this.idf, this.commentForm.value).subscribe((data) => {
-  //     this.selectedTraining.comments.push(data);
-  //     this.newComment.text = '';
-  //   });
-  //  }
+ 
  onSubmitComment() {
   const loggedInUserId = this.authService.getCurrentUserId();
   console.log(loggedInUserId);

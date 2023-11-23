@@ -13,16 +13,20 @@ const url = 'http://localhost:3000/formation';
 export class FormationService {
   constructor(private http: HttpClient) {}
 
-  getFormation(): Observable<Formation[]> {
-    return this.http.get<Formation[]>(url);
+  getFormation(searchValue: string, typeValue: string): Observable<Formation[]> {
+    return this.http.get<Formation[]>(
+     ` http://localhost:3000/formation?name_like=${searchValue || typeValue}`,
+    );
   }
 
   getFormationById(id: number): Observable<Formation | undefined> {
     return this.http.get<Formation>(url + '/' + id);
   }
+
   updateFormation(formation: Formation): Observable<Formation> {
     return this.http.put<Formation>(url + '/' + formation.id, formation);
   }
+
   addComment(
     formationId: number,
     comment: Commentaire

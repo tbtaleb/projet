@@ -26,6 +26,16 @@
           "idUser": 5,
           "text": "qsdqsd",
           "id": 381
+        },
+        {
+          "idUser": 5,
+          "text": "3ejbetni waslou ",
+          "id": 818
+        },
+        {
+          "idUser": 2,
+          "text": "bayrem 9alkom behya",
+          "id": 242
         }
       ]
     },
@@ -39,14 +49,7 @@
       "nbParticipant": 15,
       "certif": true,
       "workshop": true,
-      "location": "Online",
-      "comments": [
-        {
-          "idUser": 5,
-          "text": "ss",
-          "id": 38
-        }
-      ]
+      "location": "Online"
     },
     {
       "id": 3,
