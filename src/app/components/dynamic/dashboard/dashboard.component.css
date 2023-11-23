@@ -21,14 +21,3 @@
   padding: 20px;
   box-sizing: border-box;
 }
-
-.main-content {
-  position: fixed;
-  left: 20%; /* Set to the width of the sidebar */
-  top: 10%; /* Set to the height of the navbar */
-  width: 80%;
-  height: 90%; /* Set to 100% - height of the navbar */
-  padding: 20px;
-  box-sizing: border-box;
-  overflow: auto; /* Add this if you want scrolling for content overflow */
-}

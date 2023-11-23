@@ -29,9 +29,10 @@ export class NavbarComponent {
     this.auth.logout();
   }
 
-  showAlert(){
-    if(!this.logedIn){
-      alert("you should log in first")
+  showAlert() {
+    if (!this.logedIn) {
+      alert('you should log in first');
     }
+    this.router.navigate(['/home']);
   }
 }

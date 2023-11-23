@@ -1,78 +1,37 @@
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#" >test</a>
-        </div>
-        <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-left">
-                <li>
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <i class="fa fa-dashboard"></i>
-                        <p class="hidden-lg hidden-md">test</p>
-                    </a>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <i class="fa fa-globe"></i>
-                        <b class="caret"></b>
-                        <span class="notification hidden-sm hidden-xs">5</span>
-                        <p class="hidden-lg hidden-md">
-                            5 Notifications
-                            <b class="caret"></b>
-                        </p>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Notification 1</a></li>
-                        <li><a href="#">Notification 2</a></li>
-                        <li><a href="#">Notification 3</a></li>
-                        <li><a href="#">Notification 4</a></li>
-                        <li><a href="#">Another notification</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-search"></i>
-                        <p class="hidden-lg hidden-md">Search</p>
-                    </a>
-                </li>
-            </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="#">
-                        Account
-                    </a>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-
-                            Dropdown
-                            <b class="caret"></b>
-                        
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">
-                        Log out
-                    </a>
-                </li>
-                <li class="separator hidden-lg hidden-md"></li>
-            </ul>
-        </div>
+ <div class="header">
+    <div class="header-left">
+      <a href="index.html" class="logo">
+        <img src="assets/img/logo.png" width="35" height="35" alt="" />
+        <span>LMS</span>
+      </a>
     </div>
-</nav>
+     <a id="toggle_btn" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+    <a id="mobile_btn" class="mobile_btn float-left" href="#sidebar"
+      ><i class="fa fa-bars"></i
+    ></a>
+    <ul class="nav user-menu float-right">
+      <li class="nav-item dropdown">
+        <a
+          href="#"
+          class="dropdown-toggle nav-link user-link"
+          data-toggle="dropdown"
+        >
+          <span class="user-img">
+            <img
+              class="rounded-circle"
+              src="assets/img/user.jpg"
+              width="24"
+              alt="Admin"
+            />
+            <span class="status online"></span>
+          </span>
+          <span>Login</span>
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="login.html">Librarien</a>
+          <a class="dropdown-item" href="login.html">Student</a>
+          <a class="dropdown-item" href="index.html">LogOUt</a>
+        </div>
+      </li>
+    </ul>
+  </div>
