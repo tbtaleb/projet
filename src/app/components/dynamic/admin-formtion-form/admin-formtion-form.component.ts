@@ -69,13 +69,13 @@ export class AdminFormtionFormComponent {
 
   addFormation(formation: Formation) {
     this.formationService.addFormation(formation).subscribe(() => {
-      this.router.navigate(['dashboard/ActivityList']);
+      this.router.navigate(['/dashboard/ActivityList']);
     });
   }
 
   updateFormation(formation: Formation) {
     this.formationService.updateFormation(formation).subscribe(() => {
-      this.router.navigate(['dashboard/ActivityList']);
+      this.router.navigate(['/dashboard/ActivityList']);
     });
   }
 }

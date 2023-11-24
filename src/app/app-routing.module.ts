@@ -15,6 +15,7 @@ import { UserListComponent } from './components/dynamic/user-list/user-list.comp
 import { StaticsComponent } from './components/dynamic/statics/statics.component';
 import { AdminFormationListComponent } from './components/dynamic/admin-formation-list/admin-formation-list.component';
 import { AdminFormtionFormComponent } from './components/dynamic/admin-formtion-form/admin-formtion-form.component';
+import { ChangePasswordComponent } from './components/dynamic/change-password/change-password.component';
 
 const routes: Routes = [
   { path: 'landingpage', title: 'Welcome', component: LandingPageComponent },
@@ -38,9 +39,7 @@ const routes: Routes = [
     title: 'FormationDetail',
     component: SelectedFormationComponent,
   },
-  { path: 'dashboard/formations', component: AdminFormationListComponent },
-  { path: 'dashboard/formations/form', component: AdminFormtionFormComponent },
-  { path: 'dashboard/formations/form/:id', component: AdminFormtionFormComponent },
+
   {
     path: 'dashboard',
     title: 'Dashboard',
@@ -61,6 +60,19 @@ const routes: Routes = [
         path: 'ActivityList',
         title: 'ActivityList',
         component: AdminFormationListComponent,
+      },
+      {
+        path: 'form',
+        component: AdminFormtionFormComponent,
+      },
+      {
+        path: 'form/:id',
+        component: AdminFormtionFormComponent,
+      },
+      {
+        path: 'ChangePwd',
+        title: 'Change Password',
+        component: ChangePasswordComponent,
       },
       { path: '', redirectTo: 'statics', pathMatch: 'full' },
     ],
@@ -97,4 +109,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

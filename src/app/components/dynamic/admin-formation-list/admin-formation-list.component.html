@@ -6,7 +6,7 @@
         <div class="card">
           <div class="card-header">
             <h4 class="card-title d-inline-block">Liste des Formations</h4>
-            <a routerLink="/dashboard/formations/form" class="btn btn-primary float-right">Ajouter une Formation</a>
+            <a routerLink="/dashboard/form" class="btn btn-primary float-right">Ajouter une Formation</a>
           </div>
           <div class="card-block scrollList">
             <div class="table-responsive">
@@ -30,7 +30,7 @@
                     <td>{{ formation.date }}</td>
                     <td>{{ formation.nbParticipant }}</td>
                     <td>
-                      <button class="btn btn-warning btn-primary-one" [routerLink]="['/dashboard/formations/form', formation.id]">
+                      <button class="btn btn-warning btn-primary-one" [routerLink]="['/dashboard/form', formation.id]">
                         Modifier
                       </button>
                       <button class="btn btn-danger btn-primary-one" (click)="deleteFormation(formation.id)">

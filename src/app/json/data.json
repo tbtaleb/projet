@@ -1,46 +1,6 @@
 {
   "formation": [
     {
-      "id": 1,
-      "name": "Game Development Fundamentals",
-      "description": "Explore the basics of game development using popular game engines.",
-      "photo": "../assets/trainings.jpg",
-      "date": "2023-02-15",
-      "price": 129.99,
-      "nbParticipant": 20,
-      "certif": true,
-      "workshop": false,
-      "location": "Virtual",
-      "comments": [
-        {
-          "idUser": 2,
-          "text": "taleb jabou taleb",
-          "id": 673
-        },
-        {
-          "idUser": 2,
-          "text": "dqsd",
-          "id": 593
-        },
-        {
-          "idUser": 5,
-          "text": "qsdqsd",
-          "id": 381
-        },
-        {
-          "idUser": 5,
-          "text": "3ejbetni waslou ",
-          "id": 818
-        },
-        {
-          "idUser": 2,
-          "text": "bayrem 9alkom behya",
-          "id": 242
-        }
-        
-      ]
-    },
-    {
       "id": 2,
       "name": "Unity3D Game Programming",
       "description": "Learn game programming with Unity3D for creating immersive gaming experiences.",
@@ -90,7 +50,13 @@
       "certif": true,
       "workshop": false,
       "location": "Virtual",
-      "comments": []
+      "comments": [
+        {
+          "idUser": 2,
+          "text": "<WX<X<X",
+          "id": 310
+        }
+      ]
     },
     {
       "id": 6,
@@ -130,13 +96,39 @@
       "workshop": true,
       "location": "Hybrid",
       "comments": []
+    },
+    {
+      "id": 9,
+      "name": "Projet",
+      "description": "qsdqsd",
+      "photo": "qsdqsd",
+      "date": "",
+      "price": "",
+      "nbParticipant": "",
+      "certif": false,
+      "workshop": false,
+      "location": "",
+      "comments": []
+    },
+    {
+      "id": 10,
+      "name": "taleb",
+      "description": "taleb",
+      "photo": "taleb belek wala rajel",
+      "date": "",
+      "price": "",
+      "nbParticipant": "",
+      "certif": false,
+      "workshop": false,
+      "location": "",
+      "comments": []
     }
   ],
   "user": [
     {
       "id": 1,
       "username": "admin",
-      "password": "admin123",
+      "password": "taleb",
       "email": "admin@example.com",
       "isAdmin": true,
       "isMember": true,
@@ -205,6 +197,19 @@
           "certif": true,
           "workshop": true,
           "location": "Online"
+        },
+        {
+          "id": 5,
+          "name": "Mobile Game Development with Unreal Engine",
+          "description": "Build mobile games using the powerful Unreal Engine.",
+          "photo": "../assets/trainings.jpg",
+          "date": "2023-06-15",
+          "price": 149.99,
+          "nbParticipant": 18,
+          "certif": true,
+          "workshop": false,
+          "location": "Virtual",
+          "comments": []
         }
       ]
     },

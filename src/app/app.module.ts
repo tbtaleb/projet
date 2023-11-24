@@ -32,6 +32,7 @@ import { StaticsComponent } from './components/dynamic/statics/statics.component
 import { AdminFormationListComponent } from './components/dynamic/admin-formation-list/admin-formation-list.component';
 import { AdminFormtionFormComponent } from './components/dynamic/admin-formtion-form/admin-formtion-form.component';
 import { AdminSideBarComponent } from './components/fixed/admin-side-bar/admin-side-bar.component';
+import { ChangePasswordComponent } from './components/dynamic/change-password/change-password.component';
 
 
 @NgModule({
@@ -56,6 +57,7 @@ import { AdminSideBarComponent } from './components/fixed/admin-side-bar/admin-s
     StaticsComponent,
     AdminFormationListComponent,
     AdminFormtionFormComponent,
+    ChangePasswordComponent,
   ],
   imports: [
     FormsModule,
