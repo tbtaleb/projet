@@ -10,21 +10,21 @@ import { FormationService } from 'src/app/services/formation.service';
   styleUrls: ['./formation-list.component.css'],
 })
 export class FormationListComponent implements OnInit {
-  
+
   selectedTraining: any | null = null;
   lesFormations: Formation[] = [];
-  searchValue='';
-  typeValue =0;
+  searchValue = '';
+  typeValue = 0;
 
   constructor(
     private formatioService: FormationService,
     private router: Router,
     private fb: FormBuilder,
-  ) {}
-  
+  ) { }
+
   searchForm = this.fb.nonNullable.group({
-    searchValue:[''],
-    typeValue:[0],
+    searchValue: [''],
+    typeValue: [0],
   });
 
   ngOnInit(): void {
@@ -33,12 +33,12 @@ export class FormationListComponent implements OnInit {
   }
 
   fetchData(): void {
-    this.formatioService.getFormation(this.searchValue,this.typeValue).subscribe((data) => {
+    this.formatioService.getFormation(this.searchValue, this.typeValue).subscribe((data) => {
       console.log(this.typeValue);
-      
-        this.lesFormations = data;
+
+      this.lesFormations = data;
     });
-}
+  }
 
   showDetails(training: any): void {
     this.selectedTraining = training;
@@ -49,16 +49,16 @@ export class FormationListComponent implements OnInit {
   }
 
   onClick(id: number) {
-    this.router.navigate(['/formationList/'+id]);
-    
+    this.router.navigate(['/formationList/' + id]);
+
   }
 
-  onSearchSubmit():void{
+  onSearchSubmit(): void {
     this.typeValue = this.searchForm.value.typeValue ?? 0;
     this.searchValue = this.searchForm.value.searchValue ?? '';
     this.fetchData();
   }
 
-  
+
 
 }

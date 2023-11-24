@@ -30,8 +30,12 @@ import { AdmiNavBarComponent } from './components/fixed/admi-nav-bar/admi-nav-ba
 import { UserListComponent } from './components/dynamic/user-list/user-list.component';
 import { StaticsComponent } from './components/dynamic/statics/statics.component';
 import { AdminFormationListComponent } from './components/dynamic/admin-formation-list/admin-formation-list.component';
+
 import { AdminFormtionFormComponent } from './components/dynamic/admin-formtion-form/admin-formtion-form.component';
 import { AdminSideBarComponent } from './components/fixed/admin-side-bar/admin-side-bar.component';
+
+import { UserPageComponent } from './components/dynamic/user-page/user-page.component';
+
 import { ChangePasswordComponent } from './components/dynamic/change-password/change-password.component';
 
 
@@ -57,7 +61,6 @@ import { ChangePasswordComponent } from './components/dynamic/change-password/ch
     StaticsComponent,
     AdminFormationListComponent,
     AdminFormtionFormComponent,
-    ChangePasswordComponent,
   ],
   imports: [
     FormsModule,
