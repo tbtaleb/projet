@@ -28,7 +28,7 @@ export class AdminFormtionFormComponent {
       if (params['id']) {
         this.isEditMode = true;
         this.loadFormation(this.formationId);
-        console.log(this.formationId)
+        console.log(this.formationId);
       }
     });
   }
@@ -45,7 +45,7 @@ export class AdminFormtionFormComponent {
       certif: [false],
       workshop: [false],
       location: ['', Validators.required],
-      comments:[[]]
+      comments: [[]],
     });
   }
 
@@ -53,16 +53,20 @@ export class AdminFormtionFormComponent {
     this.formationService.getFormationById(id).subscribe((formation) => {
       if (formation) {
         this.formationForm.patchValue(formation);
-      } 
+      }
     });
   }
 
   onSubmit() {
     const formationData = this.formationForm.value;
+
     if (this.isEditMode) {
       formationData.id = this.formationId;
       this.updateFormation(formationData);
     } else {
+      const existingComments = this.formationForm.get('comments')?.value;
+      formationData.comments = existingComments || [];
+
       this.addFormation(formationData);
     }
   }

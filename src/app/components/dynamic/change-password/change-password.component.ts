@@ -37,19 +37,13 @@ export class ChangePasswordComponent implements OnInit {
         // Mettre à jour le mot de passe dans le service utilisateur (c'est à vous d'implémenter cette fonction)
         this.userService.updateUserPassword(user.id, newPassword).subscribe(
           () => {
-            console.log('Mot de passe mis à jour avec succès');
+            alert("Password Changed");
             // Naviguer vers le tableau de bord après le changement réussi
             this.router.navigate(['/dashboard']);
-          },
-          (error) => {
-            console.error(
-              'Erreur lors de la mise à jour du mot de passe',
-              error
-            );
           }
         );
       } else {
-        console.error('Ancien mot de passe incorrect');
+        alert('Old Password incorrect');
         // Gérer l'erreur, afficher un message à l'utilisateur, etc.
       }
     });

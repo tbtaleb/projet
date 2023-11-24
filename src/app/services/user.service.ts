@@ -35,13 +35,10 @@ export class UserService {
       .pipe(map((users) => users.find((user) => user.username === username)));
   }
 
-  updateUserPassword(
-    userId: number,
-    newPassword: string
-  ): Observable<User | undefined> {
+  updateUserPassword(userId: number, newPassword: string): Observable<User | undefined> {
     const updateUserUrl = `${usersUrl}/${userId}`;
 
-    return this.http.get<User[]>(usersUrl).pipe(
+    return this.getUsers().pipe(
       map((users) => {
         const updatedUsers = users.map((user) => {
           if (user.id === userId) {
@@ -57,9 +54,7 @@ export class UserService {
             updateUserUrl,
             updatedUsers.find((user) => user.id === userId)
           )
-          .subscribe(
-            () => console.log('Mot de passe mis à jour avec succès')
-          );
+          .subscribe();
 
         return updatedUsers.find((user) => user.id === userId);
       })

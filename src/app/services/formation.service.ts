@@ -43,7 +43,6 @@ export class FormationService {
   }
   updateFormation(formation: Formation): Observable<Formation> {
     const updateUrl = `${url}/${formation.id}`;
-    console.log('ID de la formation à mettre à jour :', formation.id);
     return this.http.put<Formation>(updateUrl, formation);
   }
   deleteFormation(id: number): Observable<void> {

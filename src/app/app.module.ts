@@ -61,13 +61,15 @@ import { ChangePasswordComponent } from './components/dynamic/change-password/ch
     StaticsComponent,
     AdminFormationListComponent,
     AdminFormtionFormComponent,
+    UserPageComponent,
+    ChangePasswordComponent,
   ],
   imports: [
     FormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

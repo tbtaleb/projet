@@ -4,14 +4,20 @@
       "id": 2,
       "name": "Unity3D Game Programming",
       "description": "Learn game programming with Unity3D for creating immersive gaming experiences.",
-      "photo": "../assets/trainings.jpg",
+      "photo": "../assets/Unity.jpg",
       "date": "2023-03-10",
       "price": 179.99,
       "nbParticipant": 15,
       "certif": true,
       "workshop": true,
       "location": "Online",
-      "comments": []
+      "comments": [
+        {
+          "idUser": 2,
+          "text": "SDD",
+          "id": 437
+        }
+      ]
     },
     {
       "id": 3,
@@ -24,7 +30,13 @@
       "certif": true,
       "workshop": false,
       "location": "In-Person",
-      "comments": []
+      "comments": [
+        {
+          "idUser": 2,
+          "text": "QSD",
+          "id": 525
+        }
+      ]
     },
     {
       "id": 4,
@@ -96,39 +108,13 @@
       "workshop": true,
       "location": "Hybrid",
       "comments": []
-    },
-    {
-      "id": 9,
-      "name": "Projet",
-      "description": "qsdqsd",
-      "photo": "qsdqsd",
-      "date": "",
-      "price": "",
-      "nbParticipant": "",
-      "certif": false,
-      "workshop": false,
-      "location": "",
-      "comments": []
-    },
-    {
-      "id": 10,
-      "name": "taleb",
-      "description": "taleb",
-      "photo": "taleb belek wala rajel",
-      "date": "",
-      "price": "",
-      "nbParticipant": "",
-      "certif": false,
-      "workshop": false,
-      "location": "",
-      "comments": []
     }
   ],
   "user": [
     {
       "id": 1,
       "username": "admin",
-      "password": "taleb",
+      "password": "tbtaleb",
       "email": "admin@example.com",
       "isAdmin": true,
       "isMember": true,
