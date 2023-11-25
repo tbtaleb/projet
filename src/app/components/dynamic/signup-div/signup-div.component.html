@@ -19,12 +19,14 @@
         <div
           style="margin: 0; padding: 0"
           *ngIf="signupForm.controls['username'].errors?.['minlength']"
+          class="alert alert-warning"
         >
           min length 3
         </div>
         <div
           style="margin: 0; padding: 0"
           *ngIf="signupForm.controls['username'].errors?.['required']"
+          class="alert alert-danger"
         >
           req
         </div>
@@ -42,6 +44,7 @@
           (signupForm.controls['email'].dirty ||
             signupForm.controls['email'].touched)
         "
+        class="alert alert-danger"
       >
         mail invalid
       </div>
@@ -65,18 +68,21 @@
         <div
           style="margin: 0; padding: 0"
           *ngIf="signupForm.controls['password'].errors?.['required']"
+          class="alert alert-danger"
         >
           req
         </div>
         <div
           style="margin: 0; padding: 0"
           *ngIf="signupForm.controls['password'].errors?.['minlength']"
+          class="alert alert-warning"
         >
           min length 3
         </div>
         <div
           style="margin: 0; padding: 0"
           *ngIf="signupForm.controls['password'].errors?.['maxlength']"
+          class="alert alert-warning"
         >
           max length 8
         </div>

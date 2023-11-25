@@ -27,6 +27,7 @@ export class NavbarComponent {
 
   logOut() {
     this.auth.logout();
+    
   }
 
   showAlert() {
@@ -35,5 +36,4 @@ export class NavbarComponent {
       this.router.navigate(['/home']);
     }
   }
-
 }

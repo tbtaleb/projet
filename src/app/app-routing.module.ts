@@ -9,13 +9,18 @@ import { FormationListComponent } from './components/dynamic/formation-list/form
 import { SelectedFormationComponent } from './components/dynamic/selected-formation/selected-formation.component';
 import { MainComponent } from './components/dynamic/main/main.component';
 import { AboutUsComponent } from './components/dynamic/about-us/about-us.component';
-import { AuthGuard } from './guard/auth.guard';
+
 import { DashboardComponent } from './components/dynamic/dashboard/dashboard.component';
 import { UserListComponent } from './components/dynamic/user-list/user-list.component';
 import { StaticsComponent } from './components/dynamic/statics/statics.component';
 import { AdminFormationListComponent } from './components/dynamic/admin-formation-list/admin-formation-list.component';
 import { AdminFormtionFormComponent } from './components/dynamic/admin-formtion-form/admin-formtion-form.component';
 import { ChangePasswordComponent } from './components/dynamic/change-password/change-password.component';
+import { AuthGuard } from './guard/auth.guard';
+import { adminGuard } from './guard/admin.guard';
+import { TranslationComponent } from './components/dynamic/translation/translation.component';
+
+
 
 const routes: Routes = [
   { path: 'landingpage', title: 'Welcome', component: LandingPageComponent },
@@ -44,7 +49,7 @@ const routes: Routes = [
     path: 'dashboard',
     title: 'Dashboard',
     component: DashboardComponent,
-    // canActivate: [AuthGuard],
+    canActivate: [adminGuard],
     children: [
       {
         path: 'statics',
@@ -97,6 +102,11 @@ const routes: Routes = [
         path: 'aboutUs',
         title: 'About Us',
         component: AboutUsComponent,
+      },
+      {
+        path: 'api',
+        title: 'API',
+        component: TranslationComponent,
       },
       { path: '', redirectTo: 'main', pathMatch: 'full' },
     ],

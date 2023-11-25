@@ -29,6 +29,9 @@
         <li class="nav-item px-3">
           <a routerLink="aboutUs" class="nav-link text-white">About us</a>
         </li>
+        <li class="nav-item px-3">
+          <a routerLink="api" class="nav-link text-white">API</a>
+        </li>
       </ul>
       <div class="mx-auto"></div>
       <button *ngIf="!logedIn" (click)="goToLogin()" [ngClass]="{'btn-light': isScrolled,'btn-outline-light': !isScrolled}" class="btn">Login</button>

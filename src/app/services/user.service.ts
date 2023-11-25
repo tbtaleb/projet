@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Observable, map, of } from 'rxjs';
+import { Observable, map, of, tap } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { User } from '../classes/user';
+import { Formation } from '../classes/formation';
 
 const usersUrl = 'http://localhost:3000/user';
 
@@ -35,7 +36,10 @@ export class UserService {
       .pipe(map((users) => users.find((user) => user.username === username)));
   }
 
-  updateUserPassword(userId: number, newPassword: string): Observable<User | undefined> {
+  updateUserPassword(
+    userId: number,
+    newPassword: string
+  ): Observable<User | undefined> {
     const updateUserUrl = `${usersUrl}/${userId}`;
 
     return this.getUsers().pipe(
@@ -60,4 +64,5 @@ export class UserService {
       })
     );
   }
+
 }

@@ -1,0 +1,26 @@
+<div class="bg">
+  <div class="container mt-4">
+  <div class="row">
+    <div class="col-md-4">
+      <h4 class="text-white">Langue Source</h4>
+      <select class="form-select" [(ngModel)]="selectedSourceLanguage">
+        <option *ngFor="let language of sourceLanguages" [value]="language">{{ language }}</option>
+      </select>
+      <h4 class="text-white">Texte à Traduire</h4>
+      <textarea class="form-control" [(ngModel)]="inputText"></textarea>
+    </div>
+    <div class="col-md-4">
+      <!-- <button class="btn btn-primary mt-4" (click)="translateText()">Traduire</button> -->
+    </div>
+    <div class="col-md-4">
+      <h4 class="text-white">Langue Cible</h4>
+      <select class="form-select" [(ngModel)]="selectedTargetLanguage">
+        <option *ngFor="let language of targetLanguages" [value]="language">{{ language }}</option>
+      </select>
+      <h4 class="text-white">Texte Traduit</h4>
+      <div class="border p-2">{{ translatedText }}</div>
+    </div>
+  </div>
+</div>
+
+</div>

@@ -12,49 +12,37 @@ export class AuthService {
   private usersUrl = 'http://localhost:3500/user'; // Adjust the URL based on your project structure
   private readonly USER_ID_KEY = 'user_id';
   private authenticated = false;
-  private isAdmin = false;
-
-  constructor(
-    private http: HttpClient,
-    private router: Router,
-    private userService: UserService
-  ) {}
+  public isAnAdmin = false;
+  constructor(private router: Router, private userService: UserService) {}
 
   login(username: string, password: string): void {
-    this.userService.getUsers().subscribe((users) => {
-      const authenticatedUser = users.find(
-        (user) => user.username === username && user.password === password
-      );
-
-      if (authenticatedUser) {
-        this.authenticated = true;
-        localStorage.setItem(this.USER_ID_KEY, authenticatedUser.id.toString());
-        this.isAdmin = authenticatedUser.isAdmin;
-
-        if (this.isAdmin) {
-          this.router.navigate(['/dashboard']);
+    this.userService.getUserByUsername(username).subscribe(
+      (authenticatedUser) => {
+        if (authenticatedUser && authenticatedUser.password === password) {
+          localStorage.setItem(
+            this.USER_ID_KEY,
+            authenticatedUser.id.toString()
+          );
+          if (authenticatedUser.isAdmin) {
+            this.router.navigate(['/dashboard']);
+            this.isAnAdmin = true;
+          } else {
+            this.router.navigate(['/home']);
+          }
         } else {
-          this.router.navigate(['/home']);
+          alert('User not found or incorrect password');
+         
         }
-      } else {
-        this.authenticated = false;
-        console.log('User not found');
       }
-    });
+    );
   }
-
   logout(): void {
-    this.authenticated = false;
-    this.isAdmin = false;
+    localStorage.removeItem(this.USER_ID_KEY);
     this.router.navigate(['/loginpage']);
   }
 
   isAuthenticated(): boolean {
-    return this.authenticated;
-  }
-
-  isAdminUser(): boolean {
-    return this.isAdmin;
+    return !!localStorage.getItem(this.USER_ID_KEY);
   }
 
   setAuthenticated(value: boolean): void {

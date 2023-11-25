@@ -16,10 +16,10 @@
             loginForm.controls['username'].touched)
         "
       >
-        <div *ngIf="loginForm.controls['username'].errors?.['minlength']">
+        <div *ngIf="loginForm.controls['username'].errors?.['minlength']" class="alert alert-warning">
           min length 3
         </div>
-        <div *ngIf="loginForm.controls['username'].errors?.['required']">
+        <div *ngIf="loginForm.controls['username'].errors?.['required']" class="alert alert-danger">
           req
         </div>
       </div>
@@ -37,13 +37,13 @@
             loginForm.controls['password'].touched)
         "
       >
-        <div *ngIf="loginForm.controls['password'].errors?.['required']">
+        <div *ngIf="loginForm.controls['password'].errors?.['required']" class="alert alert-danger">
           req
         </div>
-        <div *ngIf="loginForm.controls['password'].errors?.['minlength']">
+        <div *ngIf="loginForm.controls['password'].errors?.['minlength']" class="alert alert-warning">
           min length 3
         </div>
-        <div *ngIf="loginForm.controls['password'].errors?.['maxlength']">
+        <div *ngIf="loginForm.controls['password'].errors?.['maxlength']" class="alert alert-warning">
           max length 8
         </div>
       </div>
