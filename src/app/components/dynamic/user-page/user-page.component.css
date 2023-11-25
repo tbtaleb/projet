@@ -29,6 +29,8 @@ img {
     height: 54vh;
     background-color: aliceblue;
     border-radius: 20px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.67);
+    padding: 10px;
 }
 
 span {
@@ -38,8 +40,9 @@ span {
 }
 
 .userInfo {
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.67);
     font-family: chakrabold;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-size: 2vw;
 }
 
@@ -48,4 +51,31 @@ span {
     height: 45.5vh;
     background-color: aliceblue;
     border-radius: 20px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.67);
+
+}
+
+.element {
+    margin-bottom: 5px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 5px;
+    transition: box-shadow 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out, border 0.3s ease-in-out, transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.active a {
+    color: aliceblue;
+}
+
+.active {
+    border: 0;
+    color: aliceblue;
+    background-color: blueviolet;
 }

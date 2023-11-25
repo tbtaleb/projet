@@ -4,16 +4,22 @@
         <div>
             <img src="..\assets\profile-user.png" alt="">
         </div>
-        <div class="ulandlogo" >
+        <div class="ulandlogo">
 
             <ul class="nav nav-pills flex-column mb-auto">
                 <li class="nav-item">
-                    <a href="" class="nav-link link-dark"><i class="fa-solid fa-grip fa-lg" style="color: #000000;"></i>
-                        Enrolled in Trainings</a>
+                    <div routerLinkActive="active" class="element">
+                        <a routerLink="/home/user/uTrainings"><i class="fa-solid fa-grip fa-lg"
+                                style="color: #000000;"></i>
+                            Enrolled in Trainings</a>
+                    </div>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link link-dark"><i class="fa-solid fa-user-pen fa-lg"
-                            style="color: #000000;"></i> Modify You Account</a>
+                    <a routerLink="/home/user/uConfig">
+                        <div routerLinkActive="active" class="element">
+                            <i class="fa-solid fa-user-pen fa-lg" style="color: #000000;"></i> Modify Your Account
+                        </div>
+                    </a>
                 </li>
             </ul>
             <img src="..\assets\animusBlack.png" alt="">
@@ -26,22 +32,7 @@
             {{loggedinUser.email}}
         </section>
         <aside class="userMenu">
-            <div class="container">
-                <div *ngFor="let f of formation" class="col-md-auto">
-                    <span style="font-size: 20px;font-family: chakrabold;">{{f.name}}</span><br> {{f.description}}
-                </div>
-            </div>
-            <br>
-            <form formGroupName="Edit">
-                <label>Change username: </label>
-                <input type="text" formControlName="username"> <br>
-                <label>Change email: </label>
-                <input type="text" formControlName="email"> <br>
-                <label>Change password: </label>
-                <input type="text" formControlName="pass"> <br>
-                <label>Confirm password: </label>
-                <input type="text" formControlName="pass2"> <br>
-            </form>
+            <router-outlet></router-outlet>
         </aside>
     </div>
 </div>

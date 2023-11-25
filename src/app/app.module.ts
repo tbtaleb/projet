@@ -40,6 +40,8 @@ import { ChangePasswordComponent } from './components/dynamic/change-password/ch
 import { TranslationComponent } from './components/dynamic/translation/translation.component';
 
 
+import { UserTrainingsComponent } from './components/dynamic/user-trainings/user-trainings.component';
+import { UserConfigComponent } from './components/dynamic/user-config/user-config.component';
 
 
 @NgModule({
@@ -66,7 +68,6 @@ import { TranslationComponent } from './components/dynamic/translation/translati
     AdminFormtionFormComponent,
     UserPageComponent,
     ChangePasswordComponent,
-    TranslationComponent,
   ],
   imports: [
     FormsModule,

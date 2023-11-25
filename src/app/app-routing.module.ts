@@ -16,6 +16,9 @@ import { StaticsComponent } from './components/dynamic/statics/statics.component
 import { AdminFormationListComponent } from './components/dynamic/admin-formation-list/admin-formation-list.component';
 import { AdminFormtionFormComponent } from './components/dynamic/admin-formtion-form/admin-formtion-form.component';
 import { ChangePasswordComponent } from './components/dynamic/change-password/change-password.component';
+import { UserPageComponent } from './components/dynamic/user-page/user-page.component';
+import { UserConfigComponent } from './components/dynamic/user-config/user-config.component';
+import { UserTrainingsComponent } from './components/dynamic/user-trainings/user-trainings.component';
 import { AuthGuard } from './guard/auth.guard';
 import { adminGuard } from './guard/admin.guard';
 import { TranslationComponent } from './components/dynamic/translation/translation.component';
@@ -108,6 +111,17 @@ const routes: Routes = [
         title: 'API',
         component: TranslationComponent,
       },
+      {
+        path: 'user', title: 'My Account', component: UserPageComponent, canActivate: [AuthGuard], children: [
+          {
+            path: 'uConfig', component: UserConfigComponent,
+          },
+          {
+            path: 'uTrainings', component: UserTrainingsComponent,
+          },
+          { path: '', redirectTo: 'uTrainings', pathMatch: 'full' },
+        ]
+      },
       { path: '', redirectTo: 'main', pathMatch: 'full' },
     ],
   },
@@ -119,4 +133,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

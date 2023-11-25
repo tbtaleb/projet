@@ -36,4 +36,7 @@ export class NavbarComponent {
       this.router.navigate(['/home']);
     }
   }
+  toUser() {
+    this.router.navigate(['/home/user']);
+  }
 }

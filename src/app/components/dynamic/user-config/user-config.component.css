@@ -1,0 +1,25 @@
+input {
+    box-shadow: 1px 0px 8px rgba(0, 0, 0, 0.187);
+    font-family: 'chakraBold';
+    width: 20vw;
+    height: 40px;
+    border: 0;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+
+input:hover {
+    box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.485);
+    border: 1px solid blueviolet;
+}
+
+input:focus {
+    box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.485);
+    border: 3px solid blueviolet;
+}
+
+label {
+    font-size: x-large;
+}
