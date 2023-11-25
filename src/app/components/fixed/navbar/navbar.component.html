@@ -31,8 +31,10 @@
         </li>
       </ul>
       <div class="mx-auto"></div>
+      <div *ngIf="logedIn" (click)="toUser()"> <i class="fa-solid fa-circle-user fa-2xl" style="color: #ffffff; margin-right: 10px;"></i> </div>
       <button *ngIf="!logedIn" (click)="goToLogin()" [ngClass]="{'btn-light': isScrolled,'btn-outline-light': !isScrolled}" class="btn">Login</button>
       <button *ngIf="logedIn" (click)="logOut()" [ngClass]="{'btn-light': isScrolled,'btn-outline-light': !isScrolled}" class="btn">logOut</button>
+      
     </div>
   </div>
 </nav>

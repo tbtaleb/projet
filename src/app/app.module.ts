@@ -37,6 +37,8 @@ import { AdminSideBarComponent } from './components/fixed/admin-side-bar/admin-s
 import { UserPageComponent } from './components/dynamic/user-page/user-page.component';
 
 import { ChangePasswordComponent } from './components/dynamic/change-password/change-password.component';
+import { UserTrainingsComponent } from './components/dynamic/user-trainings/user-trainings.component';
+import { UserConfigComponent } from './components/dynamic/user-config/user-config.component';
 
 
 @NgModule({
@@ -63,6 +65,8 @@ import { ChangePasswordComponent } from './components/dynamic/change-password/ch
     AdminFormtionFormComponent,
     UserPageComponent,
     ChangePasswordComponent,
+    UserTrainingsComponent,
+    UserConfigComponent
   ],
   imports: [
     FormsModule,

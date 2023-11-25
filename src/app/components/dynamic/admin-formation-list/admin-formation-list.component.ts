@@ -20,7 +20,6 @@ export class AdminFormationListComponent implements OnInit {
   deleteFormation(formationId: number) {
     if (confirm('Êtes-vous sûr de vouloir supprimer cette formation ?')) {
       this.formationService.deleteFormation(formationId).subscribe(() => {
-        // Rafraîchir la liste après la suppression
         this.lesFormation = this.lesFormation.filter(
           (formation) => formation.id !== formationId
         );

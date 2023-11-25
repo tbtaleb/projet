@@ -16,6 +16,9 @@ import { StaticsComponent } from './components/dynamic/statics/statics.component
 import { AdminFormationListComponent } from './components/dynamic/admin-formation-list/admin-formation-list.component';
 import { AdminFormtionFormComponent } from './components/dynamic/admin-formtion-form/admin-formtion-form.component';
 import { ChangePasswordComponent } from './components/dynamic/change-password/change-password.component';
+import { UserPageComponent } from './components/dynamic/user-page/user-page.component';
+import { UserConfigComponent } from './components/dynamic/user-config/user-config.component';
+import { UserTrainingsComponent } from './components/dynamic/user-trainings/user-trainings.component';
 
 const routes: Routes = [
   { path: 'landingpage', title: 'Welcome', component: LandingPageComponent },
@@ -98,6 +101,17 @@ const routes: Routes = [
         title: 'About Us',
         component: AboutUsComponent,
       },
+      {
+        path: 'user', title: 'My Account', component: UserPageComponent, canActivate: [AuthGuard], children: [
+          {
+            path: 'uConfig', component: UserConfigComponent,
+          },
+          {
+            path: 'uTrainings', component: UserTrainingsComponent,
+          },
+          { path: '', redirectTo: 'uTrainings', pathMatch: 'full' },
+        ]
+      },
       { path: '', redirectTo: 'main', pathMatch: 'full' },
     ],
   },
@@ -109,4 +123,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
