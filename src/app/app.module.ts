@@ -42,6 +42,7 @@ import { TranslationComponent } from './components/dynamic/translation/translati
 
 import { UserTrainingsComponent } from './components/dynamic/user-trainings/user-trainings.component';
 import { UserConfigComponent } from './components/dynamic/user-config/user-config.component';
+import { EmailChangerPipe } from './pipe/email-changer.pipe';
 
 
 @NgModule({
@@ -68,6 +69,12 @@ import { UserConfigComponent } from './components/dynamic/user-config/user-confi
     AdminFormtionFormComponent,
     UserPageComponent,
     ChangePasswordComponent,
+<<<<<<< Updated upstream
+=======
+    UserTrainingsComponent,
+    UserConfigComponent,
+    EmailChangerPipe
+>>>>>>> Stashed changes
   ],
   imports: [
     FormsModule,

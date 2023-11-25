@@ -17,7 +17,7 @@
                 <li class="nav-item">
                     <a routerLink="/home/user/uConfig">
                         <div routerLinkActive="active" class="element">
-                            <i class="fa-solid fa-user-pen fa-lg" style="color: #000000;"></i> Modify Your Account
+                            <i class="fa-solid fa-user-pen fa-sm" style="color: #000000;"></i> Modify Your Account
                         </div>
                     </a>
                 </li>
@@ -29,7 +29,7 @@
     <div style="display: block; width: 85vw;">
         <section class="userInfo">
             <span>{{loggedinUser.username}}</span> <br>
-            {{loggedinUser.email}}
+            {{loggedinUser.email | emailChanger}}
         </section>
         <aside class="userMenu">
             <router-outlet></router-outlet>

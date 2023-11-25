@@ -9,14 +9,14 @@
             <input type="text" formControlName="username"> <br>
             <label>Change email: </label>
             <input type="text" formControlName="email"> <br>
-            <br><button type="submit">Submit Changes</button>
+            <br><button type="submit" class="button">Submit Changes</button>
         </form>
         <form style="float: right;" class="section" [formGroup]="passwordForm" (ngSubmit)="changePassword()">
             <label>Old password: </label>
             <input type="text" formControlName="pass"> <br>
             <label>New password: </label>
             <input type="text" formControlName="pass2"> <br>
-            <br><button type="submit">Change Password</button>
+            <br><button type="submit" class="button">Change Password</button>
 
         </form>
 

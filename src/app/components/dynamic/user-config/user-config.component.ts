@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { User } from 'src/app/classes/user';
 import { AuthService } from 'src/app/services/auth.service';
 import { UserService } from 'src/app/services/user.service';
@@ -13,7 +14,7 @@ export class UserConfigComponent implements OnInit {
   editForm !: FormGroup;
   passwordForm !: FormGroup;
 
-  constructor(private authService: AuthService, private userService: UserService, private fb: FormBuilder) {
+  constructor(private authService: AuthService, private userService: UserService, private fb: FormBuilder, private router: Router) {
   }
   ngOnInit(): void {
     const loggedInUserId = this.authService.getCurrentUserId();
@@ -22,12 +23,16 @@ export class UserConfigComponent implements OnInit {
         data => {
           this.loggedinUser = data;
           this.editForm = this.fb.group({
-            username: [this.loggedinUser.username, [Validators.minLength(3), Validators.required]],
-            email: [this.loggedinUser.email, [Validators.required, Validators.email]],
+            username: [data.username, [Validators.required]],
+            email: [data.email, [Validators.required, Validators.email]],
           });
         }
       )
     }
+    this.editForm = this.fb.group({
+      username: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
+    });
     this.passwordForm = this.fb.group({
       pass: ['', [
         Validators.minLength(3),
@@ -43,48 +48,17 @@ export class UserConfigComponent implements OnInit {
   }
 
   changeInfo() {
-    const username = this.passwordForm.get('username')?.value;
-    const email = this.passwordForm.get('email')?.value;
-
-    this.userService.getUserById(this.loggedinUser.id).subscribe(
-      user => {
-        if (username && email) {
-          const newUser: User = new User(
-            this.loggedinUser.id,
-            username,
-            this.loggedinUser.password,
-            email,
-            this.loggedinUser.isAdmin,
-            this.loggedinUser.isMember,
-            this.loggedinUser.formation,
-          );
-        this.userService.updateUser(newUser).subscribe()
-        }else if(username){
-          const newUser: User = new User(
-            this.loggedinUser.id,
-            username,
-            this.loggedinUser.password,
-            this.loggedinUser.email,
-            this.loggedinUser.isAdmin,
-            this.loggedinUser.isMember,
-            this.loggedinUser.formation,
-          );
-        this.userService.updateUser(newUser).subscribe()
-        }else if(email){
-          const newUser: User = new User(
-            this.loggedinUser.id,
-            this.loggedinUser.username,
-            this.loggedinUser.password,
-            email,
-            this.loggedinUser.isAdmin,
-            this.loggedinUser.isMember,
-            this.loggedinUser.formation,
-          );
-        this.userService.updateUser(newUser).subscribe()
-        }
+    const username = this.editForm.get('username')?.value;
+    const email = this.editForm.get('email')?.value;
+    this.userService.updateUsernameOrEmail(this.loggedinUser, username, email).subscribe(
+      updatedUser => {
+        this.loggedinUser = updatedUser;
+        this.router.navigate(['/home/user']);
+      },
+      error => {
+        console.error('Error updating user:', error);
       }
     )
-
   }
 
   changePassword() {

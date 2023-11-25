@@ -12,7 +12,7 @@ const usersUrl = 'http://localhost:3000/user';
 export class UserService {
   // private usersUrl = 'http://localhost:3500/user'; // Adjust the URL based on your project structure
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   addUser(user: User): Observable<User> {
     return this.http.post<User>(usersUrl, user);
@@ -46,13 +46,10 @@ export class UserService {
       map((users) => {
         const updatedUsers = users.map((user) => {
           if (user.id === userId) {
-            // Mettre à jour le mot de passe pour l'utilisateur spécifié
             return { ...user, password: newPassword };
           }
           return user;
         });
-
-        // Sauvegarder les utilisateurs mis à jour
         this.http
           .put(
             updateUserUrl,
@@ -64,5 +61,19 @@ export class UserService {
       })
     );
   }
+<<<<<<< Updated upstream
+=======
+  
+  updateUsernameOrEmail(user: User, newUsername?: string, newEmail?: string): Observable<User> {
+    const updatedUser: User = { ...user };
+    if (newUsername !== undefined) {
+      updatedUser.username = newUsername;
+    }
+    if (newEmail !== undefined) {
+      updatedUser.email = newEmail;
+    }
+    return this.http.put<User>(`${usersUrl}/${user.id}`, updatedUser);
+  }
+>>>>>>> Stashed changes
 
 }
