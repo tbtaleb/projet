@@ -1,3 +1,6 @@
+*{
+  font-family: chakrabold;
+}
 .sidebar {
   position: fixed;
   left: 0;

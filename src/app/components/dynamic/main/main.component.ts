@@ -13,18 +13,21 @@ export class MainComponent {
       id: 1,
       name: 'Trainings',
       img: '../../../../assets/austin-distel-rxpThOwuVgE-unsplash.jpg',
+      rout:'/home/events'
     },
     {
       id: 2,
-      name: 'Events',
+      name: 'A.P.I.',
       img: '../../../../assets/austin-distel-rxpThOwuVgE-unsplash.jpg',
+      rout:'/home/api'
     },{
       id: 3,
       name: 'About us',
       img: '../../../../assets/austin-distel-rxpThOwuVgE-unsplash.jpg',
+      rout:'/home/aboutUs'
     },
   ];
-  GoTo(){
-    this.router.navigate(["/events"])
+  GoTo(rout:String){
+    this.router.navigate([rout])
   }
 }

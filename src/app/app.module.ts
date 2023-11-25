@@ -69,12 +69,9 @@ import { EmailChangerPipe } from './pipe/email-changer.pipe';
     AdminFormtionFormComponent,
     UserPageComponent,
     ChangePasswordComponent,
-<<<<<<< Updated upstream
-=======
     UserTrainingsComponent,
     UserConfigComponent,
     EmailChangerPipe
->>>>>>> Stashed changes
   ],
   imports: [
     FormsModule,

@@ -1,8 +1,11 @@
 <div class="bg">
-  
+
   <app-introduction></app-introduction>
 
-  <div (click)="GoTo()" class="formation" *ngFor="let formation of Formation">
-    <app-formation [id]="formation.id" [name]="formation.name" [img]="formation.img"></app-formation>
+  <div *ngFor="let formation of Formation">
+    <div (click)="GoTo(formation.rout)" class="formation">
+      <app-formation [id]="formation.id" [name]="formation.name" [img]="formation.img"></app-formation>
+    </div>
+
   </div>
 </div>

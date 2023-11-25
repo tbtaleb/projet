@@ -61,8 +61,6 @@ export class UserService {
       })
     );
   }
-<<<<<<< Updated upstream
-=======
   
   updateUsernameOrEmail(user: User, newUsername?: string, newEmail?: string): Observable<User> {
     const updatedUser: User = { ...user };
@@ -74,6 +72,5 @@ export class UserService {
     }
     return this.http.put<User>(`${usersUrl}/${user.id}`, updatedUser);
   }
->>>>>>> Stashed changes
 
 }

@@ -53,7 +53,7 @@ export class UserConfigComponent implements OnInit {
     this.userService.updateUsernameOrEmail(this.loggedinUser, username, email).subscribe(
       updatedUser => {
         this.loggedinUser = updatedUser;
-        this.router.navigate(['/home/user']);
+        this.router.navigate(['/home']);
       },
       error => {
         console.error('Error updating user:', error);

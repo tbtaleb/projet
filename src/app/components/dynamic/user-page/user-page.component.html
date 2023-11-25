@@ -21,6 +21,13 @@
                         </div>
                     </a>
                 </li>
+                <li class="nav-item" *ngIf="loggedinUser.isAdmin">
+                    <a routerLink="/dashboard">
+                        <div routerLinkActive="active" class="element">
+                            <i class="fa-solid fa-user-pen fa-sm" style="color: #000000;"></i> Dashboard
+                        </div>
+                    </a>
+                </li>
             </ul>
             <img src="..\assets\animusBlack.png" alt="">
 
