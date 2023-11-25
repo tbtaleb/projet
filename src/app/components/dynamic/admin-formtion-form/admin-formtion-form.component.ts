@@ -38,7 +38,7 @@ export class AdminFormtionFormComponent {
       id: [],
       name: ['', Validators.required],
       description: ['', Validators.required],
-      photo: [''], // Add validators if needed
+      photo: [''],
       date: ['', Validators.required],
       price: ['', Validators.required],
       nbParticipant: ['', Validators.required],

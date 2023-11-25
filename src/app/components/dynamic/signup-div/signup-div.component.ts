@@ -34,7 +34,7 @@ export class SignupDivComponent {
   onSubmit(): void {
     if (this.signupForm.valid) {
       const newUser: User = {
-        id: 0, // You may need to generate a unique ID
+        id: 0, 
         username: this.signupForm.value.username,
         email: this.signupForm.value.email,
         password: this.signupForm.value.password,

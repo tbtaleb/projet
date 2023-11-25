@@ -7,10 +7,6 @@ import { Component, VERSION } from '@angular/core';
 })
 export class ApiComponent {
   name = 'Angular ' + VERSION.major;
-
-  lista: string[] = ["hola", "que", "tal", "estas"];
-  seleccionados: string[] = [];
-
   pokemons: string[] = [];
   pokeStats: any[] = [];
 

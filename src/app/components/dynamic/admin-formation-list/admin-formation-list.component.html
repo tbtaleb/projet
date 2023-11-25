@@ -5,16 +5,16 @@
       <div class="col-12 col-md-6 col-lg-8 col-xl-12">
         <div class="card">
           <div class="card-header">
-            <h4 class="card-title d-inline-block">Liste des Formations</h4>
-            <a routerLink="/dashboard/form" class="btn btn-primary float-right">Ajouter une Formation</a>
+            <h4 class="card-title d-inline-block">Liste of Trainings</h4>
+            <a routerLink="/dashboard/form" class="btn btn-primary float-right">Add Training</a>
           </div>
           <div class="card-block scrollList">
             <div class="table-responsive">
               <table class="table mb-0 new-patient-table">
                 <thead>
                   <tr>
-                    <th>Nom</th>
-                    <th>Emplacement</th>
+                    <th>Name</th>
+                    <th>PLace</th>
                     <th>Date</th>
                     <th>Participants</th>
                     <th>Actions</th>
@@ -31,10 +31,10 @@
                     <td>{{ formation.nbParticipant }}</td>
                     <td>
                       <button class="btn btn-warning btn-primary-one" [routerLink]="['/dashboard/form', formation.id]">
-                        Modifier
+                        Edit
                       </button>
                       <button class="btn btn-danger btn-primary-one" (click)="deleteFormation(formation.id)">
-                        Supprimer
+                        Delete
                       </button>
                     </td>
                   </tr>
