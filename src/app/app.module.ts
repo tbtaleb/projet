@@ -37,12 +37,13 @@ import { AdminSideBarComponent } from './components/fixed/admin-side-bar/admin-s
 import { UserPageComponent } from './components/dynamic/user-page/user-page.component';
 
 import { ChangePasswordComponent } from './components/dynamic/change-password/change-password.component';
-import { TranslationComponent } from './components/dynamic/translation/translation.component';
 
 
 import { UserTrainingsComponent } from './components/dynamic/user-trainings/user-trainings.component';
 import { UserConfigComponent } from './components/dynamic/user-config/user-config.component';
 import { EmailChangerPipe } from './pipe/email-changer.pipe';
+import { ApiComponent } from './components/dynamic/api/api.component';
+import { PokemonComponen } from './components/dynamic/pokemon/pokemon.component';
 
 
 @NgModule({
@@ -71,7 +72,9 @@ import { EmailChangerPipe } from './pipe/email-changer.pipe';
     ChangePasswordComponent,
     UserTrainingsComponent,
     UserConfigComponent,
-    EmailChangerPipe
+    EmailChangerPipe,
+    ApiComponent,
+    PokemonComponen
   ],
   imports: [
     FormsModule,

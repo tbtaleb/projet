@@ -23,14 +23,14 @@ export class UserConfigComponent implements OnInit {
         data => {
           this.loggedinUser = data;
           this.editForm = this.fb.group({
-            username: [data.username, [Validators.required]],
+            username: [data.username, [Validators.required,Validators.minLength(3),]],
             email: [data.email, [Validators.required, Validators.email]],
           });
         }
       )
     }
     this.editForm = this.fb.group({
-      username: ['', [Validators.required]],
+      username: ['', [Validators.required,Validators.minLength(3),]],
       email: ['', [Validators.required, Validators.email]],
     });
     this.passwordForm = this.fb.group({

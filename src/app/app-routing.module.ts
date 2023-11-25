@@ -21,7 +21,7 @@ import { UserConfigComponent } from './components/dynamic/user-config/user-confi
 import { UserTrainingsComponent } from './components/dynamic/user-trainings/user-trainings.component';
 import { AuthGuard } from './guard/auth.guard';
 import { adminGuard } from './guard/admin.guard';
-import { TranslationComponent } from './components/dynamic/translation/translation.component';
+import { ApiComponent } from './components/dynamic/api/api.component';
 
 
 
@@ -109,7 +109,7 @@ const routes: Routes = [
       {
         path: 'api',
         title: 'API',
-        component: TranslationComponent,
+        component: ApiComponent,
       },
       {
         path: 'user', title: 'My Account', component: UserPageComponent, canActivate: [AuthGuard], children: [

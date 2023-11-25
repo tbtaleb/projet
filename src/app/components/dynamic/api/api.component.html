@@ -1,0 +1,12 @@
+<div class="bg " >
+    <h1>API Pokemon</h1>
+    <button class="button" type="button" (click)="getStatsPokemon()">
+        <div style="display: flex; justify-content: space-evenly;align-items: center; ">
+            <img src="../../../../assets/game.png" alt="">
+            Dex
+            <img src="../../../../assets/game.png" alt="">
+        </div>
+    </button>
+    <hr>
+    <app-pokemon [listPokemons]="pokeStats"></app-pokemon>
+</div>
