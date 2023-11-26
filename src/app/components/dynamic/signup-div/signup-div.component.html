@@ -9,7 +9,7 @@
       /><br />
       <div
         class="text-danger fw-bold"
-        style="margin: 0; padding: 0"
+       
         *ngIf="
           signupForm.controls['username'].invalid &&
           (signupForm.controls['username'].dirty ||
@@ -17,16 +17,16 @@
         "
       >
         <div
-          style="margin: 0; padding: 0"
+        
           *ngIf="signupForm.controls['username'].errors?.['minlength']"
-          class="alert alert-warning"
+          class="alert alert-warning p-2"
         >
           min length 3
         </div>
         <div
-          style="margin: 0; padding: 0"
+          
           *ngIf="signupForm.controls['username'].errors?.['required']"
-          class="alert alert-danger"
+          class="alert alert-danger p-2"
         >
           req
         </div>
@@ -38,13 +38,13 @@
       />
       <div
         class="text-danger fw-bold"
-        style="margin: 0; padding: 0"
+       
         *ngIf="
           signupForm.controls['email'].invalid &&
           (signupForm.controls['email'].dirty ||
             signupForm.controls['email'].touched)
         "
-        class="alert alert-danger"
+        class="alert alert-danger p-2"
       >
         mail invalid
       </div>
@@ -58,7 +58,7 @@
 
       <div
         class="text-danger fw-bold"
-        style="margin: 0; padding: 0"
+       
         *ngIf="
           signupForm.controls['password'].invalid &&
           (signupForm.controls['password'].dirty ||
@@ -66,23 +66,23 @@
         "
       >
         <div
-          style="margin: 0; padding: 0"
+         
           *ngIf="signupForm.controls['password'].errors?.['required']"
-          class="alert alert-danger"
+          class="alert alert-danger p-2"
         >
           req
         </div>
         <div
-          style="margin: 0; padding: 0"
+         
           *ngIf="signupForm.controls['password'].errors?.['minlength']"
-          class="alert alert-warning"
+          class="alert alert-warning p-2"
         >
           min length 3
         </div>
         <div
-          style="margin: 0; padding: 0"
+         
           *ngIf="signupForm.controls['password'].errors?.['maxlength']"
-          class="alert alert-warning"
+          class="alert alert-warning p-2"
         >
           max length 8
         </div>

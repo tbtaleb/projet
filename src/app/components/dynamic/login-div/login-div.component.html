@@ -8,18 +8,23 @@
         placeholder="Username"
       /><br />
       <div
-        class="text-danger fw-bold"
-        style="margin: 0"
+        class="text-danger fw-bold" 
         *ngIf="
           loginForm.controls['username'].invalid &&
           (loginForm.controls['username'].dirty ||
             loginForm.controls['username'].touched)
         "
       >
-        <div *ngIf="loginForm.controls['username'].errors?.['minlength']" class="alert alert-warning">
+        <div
+          *ngIf="loginForm.controls['username'].errors?.['minlength']"
+          class="alert alert-warning p-2"
+        >
           min length 3
         </div>
-        <div *ngIf="loginForm.controls['username'].errors?.['required']" class="alert alert-danger">
+        <div
+          *ngIf="loginForm.controls['username'].errors?.['required']"
+          class="alert alert-danger p-2"
+        >
           req
         </div>
       </div>
@@ -30,20 +35,28 @@
       />
       <div
         class="text-danger fw-bold"
-        style="margin: 0"
         *ngIf="
           loginForm.controls['password'].invalid &&
           (loginForm.controls['password'].dirty ||
             loginForm.controls['password'].touched)
         "
       >
-        <div *ngIf="loginForm.controls['password'].errors?.['required']" class="alert alert-danger">
+        <div
+          *ngIf="loginForm.controls['password'].errors?.['required']"
+          class="alert alert-danger p-2"
+        >
           req
         </div>
-        <div *ngIf="loginForm.controls['password'].errors?.['minlength']" class="alert alert-warning">
+        <div
+          *ngIf="loginForm.controls['password'].errors?.['minlength']"
+          class="alert alert-warning p-2"
+        >
           min length 3
         </div>
-        <div *ngIf="loginForm.controls['password'].errors?.['maxlength']" class="alert alert-warning">
+        <div
+          *ngIf="loginForm.controls['password'].errors?.['maxlength']"
+          class="alert alert-warning p-2"
+        >
           max length 8
         </div>
       </div>

@@ -14,22 +14,21 @@ export class AboutUsComponent implements OnInit {
   ngOnInit(): void {
     this.slides[0] = {
       id: 0,
-      src: "../../../../assets/img1.jpg",
+      src: '../../../../assets/img1.jpg',
       title: 'First slide',
-      subtitle: 'Nulla vitae elit libero, a pharetra augue mollis interdum.'
+      subtitle: 'The work is what matters. — Jhin',
     };
     this.slides[1] = {
       id: 1,
       src: '../../../../assets/img2.jpg',
       title: 'Second slide',
-      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      subtitle: 'A True Master Is An Eternal Student. — Master YI',
     };
     this.slides[2] = {
       id: 2,
       src: '../../../../assets/img3.jpg',
       title: 'Third slide',
-      subtitle:
-        'Praesent commodo cursus magna, vel scelerisque nisl consectetur.',
+      subtitle: 'We Are What We Overcome. — Pantheon',
     };
   }
 }

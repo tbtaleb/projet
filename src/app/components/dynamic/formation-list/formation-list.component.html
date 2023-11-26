@@ -19,7 +19,7 @@
     <div class="row gy-3">
       <div *ngFor="let training of lesFormations" class="training-item col-md-4 my-3">
         <div class="card" style="cursor: pointer" (click)="onClick(training.id)">
-          <img [src]="training.photo" class="card-img-top" alt="..." />
+          <img style="height: 300px;" [src]="training.photo" class="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title">{{ training.name }}</h5>
             <p class="card-text">

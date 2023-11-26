@@ -27,8 +27,6 @@ export class UserTrainingsComponent implements OnInit {
         data => {
           this.loggedinUser = data;
           this.formation = data.formation;
-          console.log(this.formation);
-
         }
       )
     }

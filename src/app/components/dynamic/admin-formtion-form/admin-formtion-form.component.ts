@@ -28,7 +28,6 @@ export class AdminFormtionFormComponent {
       if (params['id']) {
         this.isEditMode = true;
         this.loadFormation(this.formationId);
-        console.log(this.formationId);
       }
     });
   }
@@ -38,7 +37,7 @@ export class AdminFormtionFormComponent {
       id: [],
       name: ['', Validators.required],
       description: ['', Validators.required],
-      photo: [''],
+      photo: ['', Validators.required],
       date: ['', Validators.required],
       price: ['', Validators.required],
       nbParticipant: ['', Validators.required],

@@ -6,7 +6,9 @@
         <div class="card">
           <div class="card-header">
             <h4 class="card-title d-inline-block">Liste of Trainings</h4>
-            <a routerLink="/dashboard/form" class="btn btn-primary float-right">Add Training</a>
+            <a routerLink="/dashboard/form" class="btn btn-primary float-right"
+              >Add Training</a
+            >
           </div>
           <div class="card-block scrollList">
             <div class="table-responsive">
@@ -16,24 +18,48 @@
                     <th>Name</th>
                     <th>PLace</th>
                     <th>Date</th>
-                    <th>Participants</th>
+                    <th>Description</th>
+                    <th>Max Participants</th>
+                    <th>Cetified</th>
                     <th>Actions</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr *ngFor="let formation of lesFormation">
                     <td>
-                      <img width="28" height="28" class="rounded-circle" src="assets/animusBlack.png" alt="" />
+                      <img
+                        width="28"
+                        height="28"
+                        class="rounded-circle"
+                        src="assets/animusBlack.png"
+                        alt=""
+                      />
                       <h2>{{ formation.name }}</h2>
                     </td>
-                    <td>{{ formation.location }}</td>
+                    <td> {{ formation.location }}</td>
                     <td>{{ formation.date }}</td>
+                    <td>{{ formation.description }}</td>
                     <td>{{ formation.nbParticipant }}</td>
                     <td>
-                      <button class="btn btn-warning btn-primary-one" [routerLink]="['/dashboard/form', formation.id]">
+                      <i
+                        [ngClass]="{
+                          'fa-solid': true,
+                          'fa-check': formation.certif,
+                          'fa-x': !formation.certif
+                        }"
+                      ></i>
+                    </td>
+                    <td>
+                      <button
+                        class="btn btn-warning btn-primary-one"
+                        [routerLink]="['/dashboard/form', formation.id]"
+                      >
                         Edit
                       </button>
-                      <button class="btn btn-danger btn-primary-one" (click)="deleteFormation(formation.id)">
+                      <button
+                        class="btn btn-danger btn-primary-one"
+                        (click)="deleteFormation(formation.id)"
+                      >
                         Delete
                       </button>
                     </td>

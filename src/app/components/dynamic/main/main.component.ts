@@ -18,12 +18,12 @@ export class MainComponent {
     {
       id: 2,
       name: 'A.P.I.',
-      img: '../../../../assets/austin-distel-rxpThOwuVgE-unsplash.jpg',
+      img: '../../../../assets/api.jpg',
       rout:'/home/api'
     },{
       id: 3,
       name: 'About us',
-      img: '../../../../assets/austin-distel-rxpThOwuVgE-unsplash.jpg',
+      img: '../../../../assets/aboutUs.jpg',
       rout:'/home/aboutUs'
     },
   ];

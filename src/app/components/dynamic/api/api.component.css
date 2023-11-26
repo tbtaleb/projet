@@ -19,7 +19,7 @@ hr{
     background: rgb(150, 70, 252);
     background: radial-gradient(circle, rgba(150, 70, 252, 1) 0%, rgba(91, 26, 175, 1) 100%);
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display:block;
     align-items: center;
     justify-content: center;

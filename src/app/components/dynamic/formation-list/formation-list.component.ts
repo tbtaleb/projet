@@ -34,7 +34,6 @@ export class FormationListComponent implements OnInit {
 
   fetchData(): void {
     this.formatioService.getFormation(this.searchValue, this.typeValue).subscribe((data) => {
-      console.log(this.typeValue);
 
       this.lesFormations = data;
     });

@@ -12,7 +12,7 @@ export class AuthService {
   private usersUrl = 'http://localhost:3500/user'; // Adjust the URL based on your project structure
   private readonly USER_ID_KEY = 'user_id';
   private authenticated = false;
-  public isAnAdmin = false;
+  isAnAdmin ="admin" ;
   constructor(private router: Router, private userService: UserService) {}
 
   login(username: string, password: string): void {
@@ -24,9 +24,11 @@ export class AuthService {
             authenticatedUser.id.toString()
           );
           if (authenticatedUser.isAdmin) {
+            localStorage.setItem(this.isAnAdmin,"true");
             this.router.navigate(['/dashboard']);
-            this.isAnAdmin = true;
+            
           } else {
+            localStorage.setItem(this.isAnAdmin, 'false');
             this.router.navigate(['/home']);
           }
         } else {
@@ -38,6 +40,7 @@ export class AuthService {
   }
   logout(): void {
     localStorage.removeItem(this.USER_ID_KEY);
+    localStorage.removeItem(this.isAnAdmin);
     this.router.navigate(['/loginpage']);
   }
 
