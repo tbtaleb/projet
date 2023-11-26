@@ -9,12 +9,19 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class UserListComponent implements OnInit {
   Users: User[] = [];
+
   constructor(private userService: UserService) {}
   ngOnInit(): void {
     this.userService.getUsers().subscribe((data) => {
-        this.Users = data;
+      this.Users = data;
     });
   }
-
   
+  deleteUser(userId: number) {
+    if (confirm('Are you sure you want to delete this user ?')) {
+      this.userService.deleteUser(userId).subscribe(() => {
+        this.Users = this.Users.filter((user) => user.id !== userId);
+      });
+    }
+  }
 }

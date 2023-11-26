@@ -73,4 +73,8 @@ export class UserService {
     return this.http.put<User>(`${usersUrl}/${user.id}`, updatedUser);
   }
 
+  deleteUser(id: number): Observable<void> {
+    return this.http.delete<void>(usersUrl + '/' + id);
+  }
+
 }
