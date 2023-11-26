@@ -37,7 +37,7 @@ export class AdminFormtionFormComponent {
       id: [],
       name: ['', Validators.required],
       description: ['', Validators.required],
-      photo: ['', Validators.required],
+      photo: ['', [Validators.required,Validators.pattern("^../assets/[a-zA-Z0-9 ^éèàù]+.(jpg|jpeg|png)")]],
       date: ['', Validators.required],
       price: ['', Validators.required],
       nbParticipant: ['', Validators.required],

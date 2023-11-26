@@ -12,7 +12,7 @@ input.ng-valid{
   flex-direction: column;
   border-radius: 50px;
   width: 500px;
-  min-height: 300px;
+  min-height: 100vh;
   background: rgb(90, 7, 129);
   background: linear-gradient(16deg, #662c91 52%, #9047c3 97%);
   box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.457);
