@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 import { Formation } from 'src/app/classes/formation';
 import { FormationService } from 'src/app/services/formation.service';
 

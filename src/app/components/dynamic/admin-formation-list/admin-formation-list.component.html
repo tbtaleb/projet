@@ -3,6 +3,7 @@
   <div class="content">
     <div class="row">
       <div class="col-12 col-md-10 col-lg-10 col-xl-12">
+      <div class="col-12 col-md-10 col-lg-10 col-xl-12">
         <div class="card">
           <div class="card-header">
             <h4 class="card-title d-inline-block">Liste of Trainings</h4>
@@ -41,13 +42,7 @@
                 <tbody>
                   <tr *ngFor="let formation of lesFormation">
                     <td>
-                      <img
-                        width="28"
-                        height="28"
-                        class="rounded-circle"
-                        src="assets/animusBlack.png"
-                        alt=""
-                      />
+                      <img width="28" height="28" class="rounded-circle" src="assets/animusBlack.png" alt="" />
                       <h2>{{ formation.name }}</h2>
                     </td>
                     <td>{{ formation.location }}</td>
@@ -56,25 +51,17 @@
                     <td>{{ formation.price }}</td>
                     <td>{{ formation.nbParticipant }}</td>
                     <td>
-                      <i
-                        [ngClass]="{
+                      <i [ngClass]="{
                           'fa-solid': true,
                           'fa-check': formation.certif,
                           'fa-x': !formation.certif
-                        }"
-                      ></i>
+                        }"></i>
                     </td>
                     <td>
-                      <button
-                        class="btn btn-warning btn-primary-one"
-                        [routerLink]="['/dashboard/form', formation.id]"
-                      >
+                      <button class="btn btn-warning btn-primary-one" [routerLink]="['/dashboard/form', formation.id]">
                         Edit
                       </button>
-                      <button
-                        class="btn btn-danger btn-primary-one"
-                        (click)="deleteFormation(formation.id)"
-                      >
+                      <button class="btn btn-danger btn-primary-one" (click)="deleteFormation(formation.id)">
                         Delete
                       </button>
                     </td>
