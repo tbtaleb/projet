@@ -32,8 +32,8 @@
       "date": "2023-04-05",
       "price": 249.99,
       "nbParticipant": 30,
-      "certif": true,
-      "workshop": false,
+      "certif": false,
+      "workshop": true,
       "location": "University",
       "comments": [
         {
@@ -123,7 +123,21 @@
       "email": "admin@example.com",
       "isAdmin": true,
       "isMember": true,
-      "formation": []
+      "formation": [
+        {
+          "id": 4,
+          "name": "Virtual Reality (VR) Game Development",
+          "description": "Create immersive virtual reality games with hands-on VR development techniques.",
+          "photo": "../assets/vr.jpg",
+          "date": "2023-05-20",
+          "price": 199.99,
+          "nbParticipant": 25,
+          "certif": true,
+          "workshop": true,
+          "location": "Hybrid",
+          "comments": []
+        }
+      ]
     },
     {
       "id": 2,

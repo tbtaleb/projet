@@ -81,6 +81,12 @@
                       >
                         Training photo is required.
                       </div>
+                      <div
+                        *ngIf="formationForm.controls['photo'].errors?.['pattern']"
+                        class="alert alert-warning p-2"
+                      >
+                        Training photo is invalid.
+                      </div>
                     </div>
                   </div>
                   <div class="form-group">
