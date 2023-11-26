@@ -70,21 +70,14 @@ export class ApiComponent implements OnInit {
    
   }
   searchPokemon(searchTerm: string) {
-    // Vous pouvez appeler l'API de recherche ici avec le terme de recherche (searchTerm)
-    // Mettez à jour la liste des pokémons en fonction des résultats de la recherche
-
-    // Par exemple, si vous avez déjà la liste complète des pokémons dans pokeStats,
-    // vous pouvez filtrer cette liste en fonction du terme de recherche
     if (searchTerm) {
       this.pokeStats = this.pokeStats.filter((pokemon) =>
         pokemon.name.toLowerCase().includes(searchTerm.toLowerCase())
         
       );
-      console.log(this.pokeStats);
       
     } else {
-      // Si le champ de recherche est vide, réinitialisez la liste des pokémons avec la liste complète
-      this.getStatsPokemon(); // Assurez-vous que cette fonction est correctement implémentée dans votre code
+      this.getStatsPokemon();
     }
   }
 
