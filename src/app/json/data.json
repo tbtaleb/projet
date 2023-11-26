@@ -142,7 +142,7 @@
     {
       "id": 2,
       "username": "user1",
-      "password": "taleb",
+      "password": "user1",
       "email": "user1@gmail.com",
       "isAdmin": false,
       "isMember": true,
