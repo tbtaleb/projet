@@ -63,3 +63,17 @@ p {
     line-height: normal;
 }
 
+.creators{
+    width: 70vw;
+    height: 100vh;
+}
+
+.text4{
+    width: 30vw;
+    height: 100vh;
+    background-color: mediumslateblue;
+    font-family: chakrabold;
+    padding: 50px;
+    color: aliceblue;
+    font-size: 3vw;
+}

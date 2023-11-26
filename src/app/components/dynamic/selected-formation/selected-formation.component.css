@@ -40,6 +40,7 @@
 .img{
   border-radius: 30px;
   width: 35vw ;
+  max-height: 50vh;
 }
 .price{
   font-size: 30px;
