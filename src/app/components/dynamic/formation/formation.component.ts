@@ -1,6 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { Form } from '@angular/forms';
-import { Formation } from 'src/app/classes/formation';
 
 @Component({
   selector: 'app-formation',

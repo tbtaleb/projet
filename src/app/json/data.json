@@ -236,15 +236,6 @@
       "formation": []
     },
     {
-      "id": 4,
-      "username": "med",
-      "email": "jabou@gmail.com",
-      "password": "med",
-      "isAdmin": false,
-      "isMember": true,
-      "formation": []
-    },
-    {
       "id": 5,
       "username": "taleb",
       "email": "taleb@gmail.com",

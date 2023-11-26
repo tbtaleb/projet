@@ -2,10 +2,22 @@
 <div class="page-wrapper">
   <div class="content">
     <div class="row">
-      <div class="col-12 col-md-6 col-lg-8 col-xl-12">
+      <div class="col-12 col-md-10 col-lg-10 col-xl-12">
         <div class="card">
           <div class="card-header">
             <h4 class="card-title d-inline-block">Liste of Trainings</h4>
+            <form [formGroup]="searchForm" (ngSubmit)="onSearchSubmit()">
+              <div class="d-flex my-2">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                  formControlName="searchValue"
+                />
+                <button class="btn btn-dark" type="submit">Search</button>
+              </div>
+            </form>
             <a routerLink="/dashboard/form" class="btn btn-primary float-right"
               >Add Training</a
             >
@@ -19,6 +31,8 @@
                     <th>PLace</th>
                     <th>Date</th>
                     <th>Description</th>
+
+                    <th>Price</th>
                     <th>Max Participants</th>
                     <th>Cetified</th>
                     <th>Actions</th>
@@ -36,9 +50,10 @@
                       />
                       <h2>{{ formation.name }}</h2>
                     </td>
-                    <td> {{ formation.location }}</td>
+                    <td>{{ formation.location }}</td>
                     <td>{{ formation.date }}</td>
                     <td>{{ formation.description }}</td>
+                    <td>{{ formation.price }}</td>
                     <td>{{ formation.nbParticipant }}</td>
                     <td>
                       <i

@@ -5,14 +5,14 @@
     <div style="display: flex">
       <img height="350px" [src]="selectedTraining.photo" class="img" />
       <div style="margin-left: 50px">
-        <h1>{{ selectedTraining.name }}</h1>
+        <h1>{{ selectedTraining.name | uppercase}}</h1>
         <hr style="border-top: solid" />
         <p>{{ selectedTraining.description }}</p>
         <hr style="border-top: solid" />
         <div style="display: flex">
           <div>
             Date: {{ selectedTraining.date }} <br />
-            Location: {{ selectedTraining.location }}
+            Location: {{ selectedTraining.location | titlecase }}
           </div>
           <div style="margin-left: 50px">
             {{ selectedTraining.nbParticipant }} Spots Available <br />

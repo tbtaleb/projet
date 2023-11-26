@@ -12,7 +12,7 @@ const usersUrl = 'http://localhost:3000/user';
 export class UserService {
   // private usersUrl = 'http://localhost:3500/user'; // Adjust the URL based on your project structure
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   addUser(user: User): Observable<User> {
     return this.http.post<User>(usersUrl, user);
@@ -61,8 +61,12 @@ export class UserService {
       })
     );
   }
-  
-  updateUsernameOrEmail(user: User, newUsername?: string, newEmail?: string): Observable<User> {
+
+  updateUsernameOrEmail(
+    user: User,
+    newUsername?: string,
+    newEmail?: string
+  ): Observable<User> {
     const updatedUser: User = { ...user };
     if (newUsername !== undefined) {
       updatedUser.username = newUsername;
@@ -72,5 +76,7 @@ export class UserService {
     }
     return this.http.put<User>(`${usersUrl}/${user.id}`, updatedUser);
   }
-
+  deleteUser(id: number): Observable<void> {
+    return this.http.delete<void>(usersUrl + '/' + id);
+  }
 }

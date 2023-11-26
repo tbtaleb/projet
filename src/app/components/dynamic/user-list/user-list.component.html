@@ -19,21 +19,26 @@
                           class="w-40 rounded-circle"
                       /></a>
                     </div>
-                    <div class="contact-info">
-                      <span class="contact-name text-ellipsis">{{
-                        user.username
-                      }}</span>
-                      <span class="contact-date">{{ user.email }}</span>
+                    <div class="contact-info d-flex justify-content-between">
+                      <div>
+                        <span class="contact-name text-ellipsis">{{
+                          user.username
+                        }}</span>
+                        <span class="contact-date">{{ user.email }}</span>
+                      </div>
+
+                      <div>
+                        <button class="btn btn-danger btn-primary-one" (click)="deleteUser(user.id)">
+                          Delete
+                        </button>
+                      </div>
                     </div>
                   </div>
-                  </ng-container
-                >
+                </ng-container>
               </li>
             </ul>
           </div>
-          <div class="card-footer text-center bg-white">
-            <a href="#" class="text-muted">View all Students</a>
-          </div>
+          
         </div>
       </div>
     </div>
